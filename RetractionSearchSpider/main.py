@@ -5,12 +5,17 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import csv
 import time
 import os
 
 dayOfEachMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 htmlDownloadPath = 'D:/Code/MouseProjectDB/Download/'
 downloadLogPath = 'D:/Code/MouseProjectDB/Download/downloadLog.txt'
+csvPath = 'D:/Code/MouseProjectDB/Target.csv'
+write2csvLogPath = 'D:/Code/MouseProjectDB/write2csvLog.txt'
 
 def GetDateStr(year, month, day, splitSymbol):
     monthStr = ''
@@ -98,13 +103,11 @@ def DownloadPage(year, month, day, driver):
         logFile.close()
         return 666
 
-def MainDownloadFunc():
+def MainDownloadFunc(beginYear, finalYear):
     ghelper = r'D:\Code\MouseProjectDB\Ghelper-v2.8.9\Ghelper_v2.8.9.crx'
     userData = r'--user-data-dir=C:\Users\32687\AppData\Local\Google\Chrome\User Data'
     chromeDriver = r'C:\Program Files\Google\Chrome\Application\chromedriver.exe'
     retractiondb = 'http://retractiondatabase.org/RetractionSearch.aspx?'
-    beginYear = 2003
-    finalYear = 2023
 
     # open target website in Chrome
     option = webdriver.ChromeOptions()
@@ -131,5 +134,143 @@ def MainDownloadFunc():
 
     driver.close()
 
+def ParseMainrowAndWrite2CSV(mainrow, writer, htmlName):
+    logFile = open(write2csvLogPath, 'a')
+
+    # title
+    try:
+        title = mainrow.find('span', {'class': 'rTitleNotIE'}).get_text()
+    except AttributeError as e:
+        title = mainrow.find('span', {'class': 'rTitle'}).get_text()
+
+    # subject
+    try:
+        subject = mainrow.find('span', {'class': 'rSubject'}).get_text()
+    except AttributeError as e:
+        subject = 'Fuck!'
+        logFile.write(htmlName + ' write rSubject failed...\n')
+        logFile.flush()
+
+    # journal
+    journal = mainrow.find('span', {'class': 'rJournal'}).get_text()
+
+    # publisher
+    try:
+        publisher = mainrow.find('span', {'class': 'rPublisher'}).get_text()
+    except AttributeError as e:
+        publisher = 'Fuck!'
+        logFile.write(htmlName + ' write rPublisher failed...\n')
+        logFile.flush()
+
+    # institution
+    try:
+        institution = mainrow.find('span', {'class': 'rInstitution'}).get_text()
+    except AttributeError as e:
+        institution = 'Fuck!'
+        logFile.write(htmlName + ' write rInstitution failed...\n')
+        logFile.flush()
+
+    col1 = title
+    col2 = subject
+    col3 = journal
+    col4 = publisher
+    col5 = institution
+    col1 = col1.encode(encoding='UTF-8', errors='replace')
+    col2 = col2.encode(encoding='UTF-8', errors='replace')
+    col3 = col3.encode(encoding='UTF-8', errors='replace')
+    col4 = col4.encode(encoding='UTF-8', errors='replace')
+    col5 = col5.encode(encoding='UTF-8', errors='replace')
+
+    # reason
+    reasons = mainrow.findAll('div', {'class': 'rReason'})
+    col6 = ''
+    for reason in reasons:
+        col6 += (reason.get_text() + '\n')
+    col6 = col6[0:-1]
+    col6 = col6.encode(encoding='UTF-8', errors='replace')
+
+    # authors
+    authors = mainrow.findAll('a', {'class': 'authorLink'})
+    col7 = ''
+    for author in authors:
+        col7 += (author.get_text() + '\n')
+    col7 = col7[0:-1]
+    col7 = col7.encode(encoding='UTF-8', errors='replace')
+
+    # date, nature, midNum
+    str = mainrow.findAll('td')[4]
+    date = str.get_text()[:10]
+    nature = str.find('span').get_text()
+    mid_num = str.get_text()[10:len(str.get_text()) - len(nature)]
+    col8 = date
+    col9 = mid_num
+    col10 = nature
+    col8 = col8.encode(encoding='UTF-8', errors='replace')
+    col9 = col9.encode(encoding='UTF-8', errors='replace')
+    col10 = col10.encode(encoding='UTF-8', errors='replace')
+
+    str = mainrow.findAll('td')[5]
+    date = str.get_text()[:10]
+    nature = str.find('span').get_text()
+    mid_num = str.get_text()[10:len(str.get_text()) - len(nature)]
+    col11 = date
+    col12 = mid_num
+    col13 = nature
+    col11 = col11.encode(encoding='UTF-8', errors='replace')
+    col12 = col12.encode(encoding='UTF-8', errors='replace')
+    col13 = col13.encode(encoding='UTF-8', errors='replace')
+
+    # nature, other_text
+    str = mainrow.findAll('td')[6]
+    nature = str.find('span').get_text()
+    other_text = str.get_text()[:len(str.get_text()) - len(nature)]
+    col14 = other_text
+    col15 = nature
+    col14 = col14.encode(encoding='UTF-8', errors='replace')
+    col15 = col15.encode(encoding='UTF-8', errors='replace')
+
+    # country, pay_walled
+    str = mainrow.findAll('td')[7].find('span')
+    pay_walled = str.find('span', {'class': 'rPaywalled'}).get_text()
+    country = str.get_text()[:len(str.get_text()) - len(pay_walled)]
+    col16 = country
+    col17 = pay_walled
+    col16 = col16.encode(encoding='UTF-8', errors='replace')
+    col17 = col17.encode(encoding='UTF-8', errors='replace')
+
+    writer.writerow(
+        [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15, col16, col17])
+
+    logFile.close()
+
+def ParseHtmlAndWrite2CSV(htmlPath):
+    htmlName = htmlPath.split('/')[-1]
+    print('Parse file: ' + htmlName)
+
+    html = urlopen('file:///' + htmlPath)
+    bs = BeautifulSoup(html.read(), 'html.parser')
+    mainrowList = bs.findAll('tr', { 'class':'mainrow' })
+
+    with open(csvPath, 'a', newline='') as f:
+        writer = csv.writer(f)
+        # write mainrow in mainrowList to csv one by one
+        for mainrow in mainrowList:
+            ParseMainrowAndWrite2CSV(mainrow, writer, htmlName)
+
+    return
+
+def MainParseAndWriteFunc():
+    dirList = os.listdir(htmlDownloadPath)
+    for dir in dirList:
+        if not dir.isdigit():
+            continue
+        # parse html files in this year one by one
+        curDir = htmlDownloadPath + '/' + dir
+        htmlList = os.listdir(curDir)
+        for html in htmlList:
+            htmlPath = curDir + '/' + html
+            ParseHtmlAndWrite2CSV(htmlPath)
+
 if __name__ == '__main__':
-    MainDownloadFunc()
+    # MainDownloadFunc(1923, 2023)
+    MainParseAndWriteFunc()
