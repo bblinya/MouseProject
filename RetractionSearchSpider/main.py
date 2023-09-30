@@ -238,8 +238,8 @@ def ParseMainrowAndWrite2CSV(mainrow, writer, htmlName):
     col16 = col16.encode(encoding='UTF-8', errors='replace')
     col17 = col17.encode(encoding='UTF-8', errors='replace')
 
-    writer.writerow(
-        [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15, col16, col17])
+    colList = [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15, col16, col17]
+    writer.writerow(colList)
 
     logFile.close()
 
@@ -264,6 +264,7 @@ def MainParseAndWriteFunc():
     for dir in dirList:
         if not dir.isdigit():
             continue
+        # dir named 9999 stores html contain over 50 items
         # parse html files in this year one by one
         curDir = htmlDownloadPath + '/' + dir
         htmlList = os.listdir(curDir)
