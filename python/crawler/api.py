@@ -1,5 +1,6 @@
 import json
 import string
+import logging
 from os import path
 from functools import wraps
 
@@ -27,13 +28,16 @@ def hit_edu_cn():
     data = utils.read_json(out_path) or []
     base_urls = set([d["base"] for d in data])
 
+    l = logging.getLogger("hit.edu.cn")
     for c in string.ascii_uppercase:
         base_url = pat.format(c)
-        print("process hit source: {}".format(base_url))
+        if base_url in base_url:
+            l.info("skip hit source: %s" % base_url)
+            continue
         if base_url not in base_urls:
+            l.info("process hit source: %s" % base_url)
             d = _hit_edu_cn_single(base_url)
             d = [{"base": base_url, **v} for v in d]
-            print(d)
             data.extend(d)
 
             with open(out_path, "w") as f:

@@ -2,6 +2,7 @@ import typing
 
 import os
 import sys
+import logging
 from hashlib import sha1
 
 from functools import wraps
@@ -10,6 +11,8 @@ from os import path
 
 import requests
 import selenium.webdriver
+
+web_logger = logging.getLogger("web")
 
 def get_static_url(url: str) -> str:
     resp = requests.get(url)
@@ -27,7 +30,7 @@ def _temp_path(url):
     temp_root = path.join(tempfile.gettempdir(), "mouse_web")
     if not path.exists(temp_root):
         os.makedirs(temp_root, exist_ok=True)
-    hash_url = sha1(url.encode()).hexdigest()[:10]
+    hash_url = sha1(url.encode()).hexdigest()[:30]
     return path.join(
             tempfile.gettempdir(),
             "mouse_web", hash_url)
@@ -36,7 +39,8 @@ def get_url_content(
         url: str,
         dyn_type: typing.Optional[str]) -> str:
     cache = _temp_path(url)
-    print("cache {} from {}".format(cache, url))
+    web_logger.debug("cache {} from {}".format(cache, url))
+
     if path.exists(cache):
         with open(cache, "r") as f:
             return f.read()
