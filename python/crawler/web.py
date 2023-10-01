@@ -36,6 +36,7 @@ def get_url_content(
         url: str,
         dyn_type: typing.Optional[str]) -> str:
     cache = _temp_path(url)
+    print("cache {} from {}".format(cache, url))
     if path.exists(cache):
         with open(cache, "r") as f:
             return f.read()
