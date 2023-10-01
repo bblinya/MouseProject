@@ -25,17 +25,22 @@ def run_config(conf: dict) -> list:
 
 @register_method
 def apply_pattern(
-        url: str,
+        url_or_path: str,
         root_pat: str,
         pat_dict: dict,
         dyn_type: typing.Optional[str] = None) -> list:
-    data = web.get_url_content(url, dyn_type)
+    if path.exists(url_or_path):
+        with open(url_or_path, "r") as f:
+            data = f.read()
+    else:
+        data = web.get_url_content(url, dyn_type)
     data = html.fromstring(data)
     matches = data.xpath(root_pat)
 
     teacher_infos = []
     for ele in matches:
-        info = {k: str(ele.xpath(v)[0]) \
-                for k, v in pat_dict.items()}
+        info = {k: ele.xpath(v) for k, v in pat_dict.items()}
+        info = {k: str(v[0]) if v else "" \
+                for k, v in info.items()}
         teacher_infos.append(info)
     return teacher_infos
