@@ -28,6 +28,7 @@ def apply_pattern(
         url_or_path: str,
         root_pat: str,
         pat_dict: dict,
+        target_process = str,
         dyn_type: typing.Optional[str] = None) -> list:
     if path.exists(url_or_path):
         with open(url_or_path, "r") as f:
@@ -40,7 +41,7 @@ def apply_pattern(
     teacher_infos = []
     for ele in matches:
         info = {k: ele.xpath(v) for k, v in pat_dict.items()}
-        info = {k: str(v[0]) if v else "" \
+        info = {k: target_process(v[0]) if v else None \
                 for k, v in info.items()}
         teacher_infos.append(info)
     return teacher_infos
