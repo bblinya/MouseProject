@@ -34,7 +34,7 @@ def apply_pattern(
         with open(url_or_path, "r") as f:
             data = f.read()
     else:
-        data = web.get_url_content(url, dyn_type)
+        data = web.get_url_content(url_or_path, dyn_type)
     data = html.fromstring(data)
     matches = data.xpath(root_pat)
 

@@ -23,6 +23,9 @@ def ahu_edu_cn():
     """ crawler for ahu(anhui university) """
     data = _ahu_edu_cn_faculties()
     print(data)
+    for d in data:
+        if d["link"] is None:
+            continue
 
 
 def _hit_edu_cn_single(url: str):
