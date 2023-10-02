@@ -9,7 +9,7 @@ import json
 import logging
 from argparse import ArgumentParser
 
-from crawler import index, api, log
+from crawler import index, api, log, data, utils
 
 common_parser = ArgumentParser("common", add_help=False)
 common_parser.add_argument(
@@ -29,29 +29,55 @@ index_parser = sub_parser.add_parser(
         parents=[ common_parser, ],
         help = "teacher link indexer")
 
-ALL_FUNCS = {}
-def register_arg(parser: ArgumentParser, func):
-    ALL_FUNCS[func.__name__] = func
-    parser.add_argument(
+data_parser = sub_parser.add_parser(
+        "data",
+        parents=[ common_parser, ],
+        help = "teacher data generator")
+
+
+INDEX_FUNCS = {}
+def register_index_arg(func):
+    INDEX_FUNCS[func.__name__] = func
+    index_parser.add_argument(
+            "--{}".format(func.__name__),
+            action="store_true",
+            help=func.__doc__)
+    
+DATA_FUNCS = {}
+def register_data_arg(func):
+    DATA_FUNCS[func.__name__] = func
+    data_parser.add_argument(
             "--{}".format(func.__name__),
             action="store_true",
             help=func.__doc__)
 
-register_arg(index_parser, api.hit_edu_cn)
+register_index_arg(api.hit_edu_cn)
 # register_arg(api.ahu_edu_cn)
-register_arg(index_parser, api.pku_edu_cn)
-register_arg(index_parser, api.sicau_edu_cn)
+register_index_arg(api.pku_edu_cn)
+register_index_arg(api.sicau_edu_cn)
+register_data_arg(data.hit_edu_cn)
+data_parser.add_argument(
+    "-o", "--output",
+    default=path.join(utils.ROOT, "sources/data"),
+    help='data save path')
 
-def main(args):
+def index_main(args):
     log.Init(log.name2level(args.verbosity))
-    for name, func in ALL_FUNCS.items():
+    for name, func in INDEX_FUNCS.items():
         if getattr(args, name, False):
             func()
 
     logging.info("index done.")
 
+def data_main(args):
+    log.Init(log.name2level(args.verbosity))
+    for name, func in DATA_FUNCS.items():
+        if getattr(args, name, False):
+            func(args.output)
 
-index_parser.set_defaults(func=main)
+
+index_parser.set_defaults(func=index_main)
+data_parser.set_defaults(func=data_main)
 
 if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
