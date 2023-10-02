@@ -9,26 +9,59 @@ from functools import wraps
 from . import index, utils, web
 
 def _sicau_single(url: str):
-    if "szdw/yjsds.htm" in url:
-        return index.xpath_select(
-                url_or_path=url,
-                root_pat="//tr/td/p/a",
-                pat_dict={
-                    "link": "./@href",
-                    "name": "./text()",
-                    })
-    return index.xpath_select(
-            url_or_path=url,
-            root_pat="//div[@class='ming']/a",
-            pat_dict={
-                "link": "./@href",
-                "name": "./text()",
-                })
+    data = index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='ming']/a",
+        pat_dict={ "link": "./@href", "name": ".//text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//tr/td[descendant::a]",
+        pat_dict={
+            "link": ".//a/@href",
+            "name": ".//text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='decoration']",
+        allow_empty=True,
+        pat_dict={
+            "link": "./div[last()]/a/@href",
+            "name": "./div[1]/span//text()",
+            })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@id='vsb_content']//p//a//*[string-length(text()) > 0]",
+        pat_dict={ "link": "./parent::a/@href", "name": ".//text()" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='teacher-name']/a",
+        pat_dict={ "link": "./@href", "name": "./text()" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='sz_tit']/a[@href]",
+        pat_dict={ "link": "./@href", "name": "./text()" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='teacher']/a[@href]",
+        pat_dict={
+          "link": "./@href",
+          "name": "./div[@class='teacher-name']//text()" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='teacher_list']//ul/li/a",
+        pat_dict={ "link": "./@href", "name": ".//text()" }
+        )
+    data = [d for d in data if d["link"]]
+    assert data
+    return data
 
-@utils.cache_json_file
+@utils.index_cache
 def sicau_edu_cn():
     """ crawler for si chuan university"""
-    l = logging.getLogger("sicau.edu.cn")
+    l = logging.getLogger("sicau")
 
     seed = path.join(utils.ROOT, "sources/index/sicau.txt")
     data = utils.read_seed(seed)
@@ -44,8 +77,9 @@ def sicau_edu_cn():
 
         tag, link = d.split("：")
         l.info("tag {} {}".format(tag, link))
-        _f = utils.cache_json_file(
-            _sicau_single, utils.temp_file(d))
+        _f = utils.index_cache(
+            _sicau_single,
+            fname=utils.temp_file(d), cache=False)
         out = _f(link)
         assert out
         out = [{"base": link, **v} for v in out]
@@ -78,7 +112,7 @@ def _hit_edu_cn_single(url: str):
     }
     return index.xpath_select(**attrs)
 
-@utils.cache_json_file
+@utils.index_cache
 def hit_edu_cn():
     """ crawler for hit school """
     pat = "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter={}"
@@ -90,7 +124,7 @@ def hit_edu_cn():
         tmp_path = "hit.{}.json".format(c)
         l.info("process {} into {}".format(
             base_url, tmp_path))
-        _f = utils.cache_json_file(
+        _f = utils.index_cache(
                 _hit_edu_cn_single,
                 utils.temp_file("hit" + c))
         out = _f(base_url)

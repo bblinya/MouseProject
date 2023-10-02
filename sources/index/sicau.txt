@@ -20,9 +20,9 @@
 专硕导师：https://xxgc.sicau.edu.cn/info/1154/2174.htm
 
 水利水电学院：
-水利系：https://slsd.sicau.edu.cn/szdw/slx.htm
-水电系：https://slsd.sicau.edu.cn/szdw/sdx.htm
-能动系：https://slsd.sicau.edu.cn/szdw/ndx.htm
+// 水利系：https://slsd.sicau.edu.cn/szdw/slx.htm
+// 水电系：https://slsd.sicau.edu.cn/szdw/sdx.htm
+// 能动系：https://slsd.sicau.edu.cn/szdw/ndx.htm
 
 人文学院：
 教授：https://rwy.sicau.edu.cn/index/xygk/szdw/js.htm

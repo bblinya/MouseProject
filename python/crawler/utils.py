@@ -13,16 +13,18 @@ ROOT = path.realpath(path.join(
 
 ulogger = logging.getLogger("utils")
 
-CACHE_ROOT = path.join(ROOT, "sources/index")
-def cache_json_file(func, fname=None):
+INDEX_ROOT = path.join(ROOT, "sources/index")
+def index_file(func, fname=None):
+    return fname or path.join(
+            INDEX_ROOT, func.__name__ + ".json")
+def index_cache(func, fname=None, cache=True,):
     @wraps(func)
     def _wrapper(*args, **kw):
-        fpath = fname or path.join(
-            CACHE_ROOT, func.__name__ + ".json")
+        fpath = index_file(func, fname)
         ulogger.info(
             "cache function: {} with file: {}".format(
                 func.__name__, fpath))
-        if path.exists(fpath):
+        if cache and path.exists(fpath):
             with open(fpath, "r") as f:
                 return json.load(f)
         data = func(*args, **kw)
