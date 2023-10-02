@@ -170,73 +170,56 @@ def ParseMainrowAndWrite2CSV(mainrow, writer, htmlName):
         logFile.write(htmlName + ' write rInstitution failed...\n')
         logFile.flush()
 
-    col1 = title
-    col2 = subject
-    col3 = journal
-    col4 = publisher
-    col5 = institution
-    col1 = col1.encode(encoding='UTF-8', errors='replace')
-    col2 = col2.encode(encoding='UTF-8', errors='replace')
-    col3 = col3.encode(encoding='UTF-8', errors='replace')
-    col4 = col4.encode(encoding='UTF-8', errors='replace')
-    col5 = col5.encode(encoding='UTF-8', errors='replace')
+    col1 = title + 'COLSPLIT'
+    col2 = subject + 'COLSPLIT'
+    col3 = journal + 'COLSPLIT'
+    col4 = publisher + 'COLSPLIT'
+    col5 = institution + 'COLSPLIT'
 
     # reason
     reasons = mainrow.findAll('div', {'class': 'rReason'})
     col6 = ''
     for reason in reasons:
-        col6 += (reason.get_text() + '\n')
-    col6 = col6[0:-1]
-    col6 = col6.encode(encoding='UTF-8', errors='replace')
+        col6 += (reason.get_text() + 'ROWSPLIT')
+    col6 += 'COLSPLIT'
 
     # authors
     authors = mainrow.findAll('a', {'class': 'authorLink'})
     col7 = ''
     for author in authors:
-        col7 += (author.get_text() + '\n')
-    col7 = col7[0:-1]
-    col7 = col7.encode(encoding='UTF-8', errors='replace')
+        col7 += (author.get_text() + 'ROWSPLIT')
+    col7 += 'COLSPLIT'
 
     # date, nature, midNum
     str = mainrow.findAll('td')[4]
     date = str.get_text()[:10]
     nature = str.find('span').get_text()
     mid_num = str.get_text()[10:len(str.get_text()) - len(nature)]
-    col8 = date
-    col9 = mid_num
-    col10 = nature
-    col8 = col8.encode(encoding='UTF-8', errors='replace')
-    col9 = col9.encode(encoding='UTF-8', errors='replace')
-    col10 = col10.encode(encoding='UTF-8', errors='replace')
+    col8 = date + 'COLSPLIT'
+    col9 = mid_num + 'COLSPLIT'
+    col10 = nature + 'COLSPLIT'
 
     str = mainrow.findAll('td')[5]
     date = str.get_text()[:10]
     nature = str.find('span').get_text()
     mid_num = str.get_text()[10:len(str.get_text()) - len(nature)]
-    col11 = date
-    col12 = mid_num
-    col13 = nature
-    col11 = col11.encode(encoding='UTF-8', errors='replace')
-    col12 = col12.encode(encoding='UTF-8', errors='replace')
-    col13 = col13.encode(encoding='UTF-8', errors='replace')
+    col11 = date + 'COLSPLIT'
+    col12 = mid_num + 'COLSPLIT'
+    col13 = nature + 'COLSPLIT'
 
     # nature, other_text
     str = mainrow.findAll('td')[6]
     nature = str.find('span').get_text()
     other_text = str.get_text()[:len(str.get_text()) - len(nature)]
-    col14 = other_text
-    col15 = nature
-    col14 = col14.encode(encoding='UTF-8', errors='replace')
-    col15 = col15.encode(encoding='UTF-8', errors='replace')
+    col14 = other_text + 'COLSPLIT'
+    col15 = nature + 'COLSPLIT'
 
     # country, pay_walled
     str = mainrow.findAll('td')[7].find('span')
     pay_walled = str.find('span', {'class': 'rPaywalled'}).get_text()
     country = str.get_text()[:len(str.get_text()) - len(pay_walled)]
-    col16 = country
+    col16 = country + 'COLSPLIT'
     col17 = pay_walled
-    col16 = col16.encode(encoding='UTF-8', errors='replace')
-    col17 = col17.encode(encoding='UTF-8', errors='replace')
 
     colList = [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15, col16, col17]
     writer.writerow(colList)
@@ -251,7 +234,7 @@ def ParseHtmlAndWrite2CSV(htmlPath):
     bs = BeautifulSoup(html.read(), 'html.parser')
     mainrowList = bs.findAll('tr', { 'class':'mainrow' })
 
-    with open(csvPath, 'a', newline='') as f:
+    with open(csvPath, 'a', newline='', encoding='UTF-8') as f:
         writer = csv.writer(f)
         # write mainrow in mainrowList to csv one by one
         for mainrow in mainrowList:
