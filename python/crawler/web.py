@@ -14,6 +14,8 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from . import utils
+
 web_logger = logging.getLogger("web")
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3.connectionpool").setLevel(logging.WARNING)
@@ -66,19 +68,10 @@ def get_dynamic_url(url: str) -> str:
     # driver.find_element(By.XPATH, "//div")
     return driver.page_source
 
-def _temp_path(url):
-    temp_root = path.join(tempfile.gettempdir(), "mouse_web")
-    if not path.exists(temp_root):
-        os.makedirs(temp_root, exist_ok=True)
-    hash_url = sha1(url.encode()).hexdigest()[:30]
-    return path.join(
-            tempfile.gettempdir(),
-            "mouse_web", hash_url)
-
 def get_url_content(
         url: str,
         dyn_type: typing.Optional[str]) -> str:
-    cache = _temp_path(url)
+    cache = utils.temp_file(url)
     web_logger.debug("cache {} from {}".format(cache, url))
 
     if path.exists(cache):

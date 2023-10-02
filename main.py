@@ -30,16 +30,17 @@ index_parser = sub_parser.add_parser(
         help = "teacher link indexer")
 
 ALL_FUNCS = {}
-def register_arg(func):
+def register_arg(parser: ArgumentParser, func):
     ALL_FUNCS[func.__name__] = func
-    index_parser.add_argument(
+    parser.add_argument(
             "--{}".format(func.__name__),
             action="store_true",
             help=func.__doc__)
 
-register_arg(api.hit_edu_cn)
+register_arg(index_parser, api.hit_edu_cn)
 # register_arg(api.ahu_edu_cn)
-register_arg(api.pku_edu_cn)
+register_arg(index_parser, api.pku_edu_cn)
+register_arg(index_parser, api.sicau_edu_cn)
 
 def main(args):
     log.Init(log.name2level(args.verbosity))

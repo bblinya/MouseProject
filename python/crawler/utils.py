@@ -2,8 +2,10 @@ import os
 import json
 import typing
 import logging
+import tempfile
 
 from os import path
+from hashlib import sha1
 from functools import wraps
 
 ROOT = path.realpath(path.join(
@@ -11,35 +13,40 @@ ROOT = path.realpath(path.join(
 
 ulogger = logging.getLogger("utils")
 
-def cache_json_file(func):
+CACHE_ROOT = path.join(ROOT, "sources/index")
+def cache_json_file(func, fname=None):
     @wraps(func)
     def _wrapper(*args, **kw):
-        fname = path.join(
-                "sources/index", func.__name__ + ".json")
+        fpath = fname or path.join(
+            CACHE_ROOT, func.__name__ + ".json")
         ulogger.info(
             "cache function: {} with file: {}".format(
-                func.__name__, fname))
-        if path.exists(fname):
-            with open(fname, "r") as f:
+                func.__name__, fpath))
+        if path.exists(fpath):
+            with open(fpath, "r") as f:
                 return json.load(f)
         data = func(*args, **kw)
-        with open(fname, "w") as f:
+        with open(fpath, "w") as f:
             json.dump(data, f,
                       ensure_ascii=False, indent=2)
         return data
     return _wrapper
 
-PredFuncT = typing.Callable[typing.List[typing.Any], bool]
+def temp_file(seed: str):
+    temp_root = path.join(tempfile.gettempdir(), "mouse_web")
+    if not path.exists(temp_root):
+        os.makedirs(temp_root, exist_ok=True)
+    hash_url = sha1(seed.encode()).hexdigest()[:30]
+    return path.join(
+            tempfile.gettempdir(),
+            "mouse_web", hash_url)
 
-#  def pred_file_exist()
-
-def run_if(pred):
-    def _run(func):
-        @wraps(func)
-        def _wrapper(*args, **kw):
-            return func(*args, **kw)
-        return _wrapper
-    return _run
+def read_seed(fpath: str):
+    with open(fpath, "r") as f:
+        data = f.readlines()
+    data = [d.strip() for d in data if d.strip()]
+    data = [d for d in data if not d.startswith("//")]
+    return data
 
 def read_json(fpath: str):
     fdir = os.path.dirname(fpath)
