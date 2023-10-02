@@ -41,7 +41,7 @@ def apply_pattern(
     teacher_infos = []
     for ele in matches:
         info = {k: ele.xpath(v) for k, v in pat_dict.items()}
-        info = {k: target_process(v[0]) if v else None \
+        info = {k: target_process(v[0]) if v else b'' \
                 for k, v in info.items()}
         teacher_infos.append(info)
     return teacher_infos
