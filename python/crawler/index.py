@@ -10,21 +10,7 @@ from lxml import html, etree
 
 from . import web
 
-ALL_METHOD = {}
-
-def register_method(f):
-    ALL_METHOD[f.__name__] = f
-    return f
-
-def run_config(conf: dict) -> list:
-    method = conf.pop("method")
-    assert method in ALL_METHOD, (
-            "available methods: {}"
-            ).format(ALL_METHOD.keys())
-    return ALL_METHOD[method](**conf)
-
-@register_method
-def apply_pattern(
+def xpath_select(
         url_or_path: str,
         root_pat: str,
         pat_dict: dict,
@@ -45,3 +31,13 @@ def apply_pattern(
                 for k, v in info.items()}
         teacher_infos.append(info)
     return teacher_infos
+
+def title(url_or_path: str, **kw):
+    attrs = {
+            "url_or_path": url_or_path,
+            "root_pat": "//title",
+            "pat_dict": { "text": ".//text()" },
+            **kw,
+            }
+    data = xpath_select(**attrs)
+    return [d["text"] for d in data]

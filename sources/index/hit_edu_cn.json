@@ -64,17 +64,17 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=B",
-    "link": "buwei?lang=zh",
-    "name": "卜巍",
-    "image": "file/showHP.do?d=1349ec72891d498e9d16abecfc767b0e&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=B",
     "link": "byp?lang=zh",
     "name": "白永平",
     "image": "file/showHP.do?d=703&&w=84&&h=84&&prevfix=84-",
     "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=B",
+    "link": "buwei?lang=zh",
+    "name": "卜巍",
+    "image": "file/showHP.do?d=1349ec72891d498e9d16abecfc767b0e&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=B",
@@ -288,10 +288,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "ljchen?lang=zh",
-    "name": "陈立甲",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "电子与信息工程学院"
+    "link": "chenzhaobo?lang=zh",
+    "name": "陈照波",
+    "image": "file/showHP.do?d=180&&w=84&&h=84&&prevfix=84-",
+    "faculty": "机电工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
@@ -309,20 +309,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "chenjin?lang=zh",
-    "name": "陈金",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "体育部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "caihegao?lang=zh",
-    "name": "蔡鹤皋",
-    "image": "file/showHP.do?d=90&&w=84&&h=84&&prevfix=84-",
-    "faculty": "机电工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
     "link": "chenxiaofeng?lang=zh",
     "name": "陈晓峰",
     "image": "file/showHP.do?d=1414&&w=84&&h=84&&prevfix=84-",
@@ -334,20 +320,6 @@
     "name": "常姜",
     "image": "images/defult-login-img.jpg",
     "faculty": "外事处"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "lovedreambaby?lang=zh",
-    "name": "常巍",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "chenzhaobo?lang=zh",
-    "name": "陈照波",
-    "image": "file/showHP.do?d=180&&w=84&&h=84&&prevfix=84-",
-    "faculty": "机电工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
@@ -369,6 +341,41 @@
     "name": "陈佳奇",
     "image": "file/showHP.do?d=aca81c7790dc405585f20b9b86cf0551&&w=84&&h=84&&prevfix=84-",
     "faculty": "数学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
+    "link": "caihegao?lang=zh",
+    "name": "蔡鹤皋",
+    "image": "file/showHP.do?d=90&&w=84&&h=84&&prevfix=84-",
+    "faculty": "机电工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
+    "link": "ljchen?lang=zh",
+    "name": "陈立甲",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "电子与信息工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
+    "link": "chenjin?lang=zh",
+    "name": "陈金",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "体育部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
+    "link": "lovedreambaby?lang=zh",
+    "name": "常巍",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
+    "link": "chenmingjun?lang=zh",
+    "name": "陈明君",
+    "image": "file/showHP.do?d=513&&w=84&&h=84&&prevfix=84-",
+    "faculty": "机电工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
@@ -404,13 +411,6 @@
     "name": "陈西",
     "image": "file/showHP.do?d=156ccfd6b67745eaaf88268501230d5c&&w=84&&h=84&&prevfix=84-",
     "faculty": "生命科学中心"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
-    "link": "chenmingjun?lang=zh",
-    "name": "陈明君",
-    "image": "file/showHP.do?d=513&&w=84&&h=84&&prevfix=84-",
-    "faculty": "机电工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=C",
@@ -1765,6 +1765,13 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
+    "link": "dingjie?lang=zh",
+    "name": "丁杰",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "环境学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
     "link": "dushanyi?lang=zh",
     "name": "杜善义",
     "image": "file/showHP.do?d=92&&w=84&&h=84&&prevfix=84-",
@@ -1776,20 +1783,6 @@
     "name": "杜志江",
     "image": "file/showHP.do?d=906&&w=84&&h=84&&prevfix=84-",
     "faculty": "机电工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
-    "link": "dingzq?lang=zh",
-    "name": "丁忠庆",
-    "image": "file/showHP.do?d=2408&&w=84&&h=84&&prevfix=84-",
-    "faculty": "医学与健康学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
-    "link": "dingjie?lang=zh",
-    "name": "丁杰",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "环境学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
@@ -1807,10 +1800,24 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
+    "link": "dingzq?lang=zh",
+    "name": "丁忠庆",
+    "image": "file/showHP.do?d=2408&&w=84&&h=84&&prevfix=84-",
+    "faculty": "医学与健康学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
     "link": "daicuihong?lang=zh",
     "name": "代翠红",
     "image": "file/showHP.do?d=1744&&w=84&&h=84&&prevfix=84-",
     "faculty": "医学与健康学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
+    "link": "dongwei?lang=zh",
+    "name": "董慰",
+    "image": "file/showHP.do?d=2057&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
@@ -1902,13 +1909,6 @@
     "name": "丁大尉",
     "image": "file/showHP.do?d=98ef4fe8292340f1a717258bbba44751&&w=84&&h=84&&prevfix=84-",
     "faculty": "电气工程及自动化学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
-    "link": "dongwei?lang=zh",
-    "name": "董慰",
-    "image": "file/showHP.do?d=2057&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=D",
@@ -2920,6 +2920,13 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
+    "link": "gaodandan?lang=zh",
+    "name": "高丹丹",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
     "link": "gaoqiang?lang=zh",
     "name": "高强",
     "image": "images/defult-login-img.jpg",
@@ -2941,13 +2948,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
-    "link": "gaowen?lang=zh",
-    "name": "高文",
-    "image": "file/showHP.do?d=283&&w=84&&h=84&&prevfix=84-",
-    "faculty": "计算学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
     "link": "gaolixin?lang=zh",
     "name": "高立新",
     "image": "file/showHP.do?d=2ca21f0fb29144d6886765a2e588dddb&&w=84&&h=84&&prevfix=84-",
@@ -2955,10 +2955,17 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
-    "link": "gaodandan?lang=zh",
-    "name": "高丹丹",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
+    "link": "gaowen?lang=zh",
+    "name": "高文",
+    "image": "file/showHP.do?d=283&&w=84&&h=84&&prevfix=84-",
+    "faculty": "计算学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
+    "link": "GaoYabin?lang=zh",
+    "name": "高亚斌",
+    "image": "file/showHP.do?d=644e4a5f36904b19993b276e58378661&&w=84&&h=84&&prevfix=84-",
+    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
@@ -3431,13 +3438,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
-    "link": "GaoYabin?lang=zh",
-    "name": "高亚斌",
-    "image": "file/showHP.do?d=644e4a5f36904b19993b276e58378661&&w=84&&h=84&&prevfix=84-",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=G",
     "link": "guoshuai?lang=zh",
     "name": "郭帅",
     "image": "file/showHP.do?d=7f93f97ed41f42868987e75a5ca77c22&&w=84&&h=84&&prevfix=84-",
@@ -3865,6 +3865,27 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
+    "link": "houyinxia?lang=zh",
+    "name": "侯银霞",
+    "image": "file/showHP.do?d=1568&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
+    "link": "jhhuang?lang=zh",
+    "name": "黄剑华",
+    "image": "file/showHP.do?d=1851&&w=84&&h=84&&prevfix=84-",
+    "faculty": "计算学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
+    "link": "houaiju?lang=zh",
+    "name": "侯爱菊",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "医学与健康学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
     "link": "hujin?lang=zh",
     "name": "胡津",
     "image": "file/showHP.do?d=450&&w=84&&h=84&&prevfix=84-",
@@ -3886,24 +3907,17 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "hehongjuan?lang=zh",
-    "name": "贺洪娟",
-    "image": "file/showHP.do?d=2037&&w=84&&h=84&&prevfix=84-",
-    "faculty": "生命科学与技术学院"
+    "link": "huangjinhua?lang=zh",
+    "name": "黄进华",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "马克思主义学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "houyinxia?lang=zh",
-    "name": "侯银霞",
-    "image": "file/showHP.do?d=1568&&w=84&&h=84&&prevfix=84-",
+    "link": "hanweiwaiguoyuxueyuan?lang=zh",
+    "name": "韩巍",
+    "image": "images/defult-login-img.jpg",
     "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "jhhuang?lang=zh",
-    "name": "黄剑华",
-    "image": "file/showHP.do?d=1851&&w=84&&h=84&&prevfix=84-",
-    "faculty": "计算学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
@@ -3914,24 +3928,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "huangjinhua?lang=zh",
-    "name": "黄进华",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "马克思主义学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "houaiju?lang=zh",
-    "name": "侯爱菊",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "医学与健康学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
-    "link": "hanweiwaiguoyuxueyuan?lang=zh",
-    "name": "韩巍",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
+    "link": "hehongjuan?lang=zh",
+    "name": "贺洪娟",
+    "image": "file/showHP.do?d=2037&&w=84&&h=84&&prevfix=84-",
+    "faculty": "生命科学与技术学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=H",
@@ -5825,17 +5825,17 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=K",
-    "link": "kxr?lang=zh",
-    "name": "孔宪仁",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=K",
     "link": "kanxin?lang=zh",
     "name": "阚欣",
     "image": "images/defult-login-img.jpg",
     "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=K",
+    "link": "kxr?lang=zh",
+    "name": "孔宪仁",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=K",
@@ -5937,6 +5937,20 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lubo?lang=zh",
+    "name": "卢波",
+    "image": "file/showHP.do?d=563&&w=84&&h=84&&prevfix=84-",
+    "faculty": "网络安全和信息化办公室"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liangyuanyuan?lang=zh",
+    "name": "梁媛媛",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
     "link": "liguibai?lang=zh",
     "name": "李圭白",
     "image": "file/showHP.do?d=78&&w=84&&h=84&&prevfix=84-",
@@ -5962,6 +5976,48 @@
     "name": "刘祖岩",
     "image": "file/showHP.do?d=202&&w=84&&h=84&&prevfix=84-",
     "faculty": "材料科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lijiehong?lang=zh",
+    "name": "李洁红",
+    "image": "file/showHP.do?d=e781401329714b68bcdac7f75ea6cd64&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lvxiaolei?lang=zh",
+    "name": "吕晓磊",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "建筑学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lvyan?lang=zh",
+    "name": "吕岩",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "体育部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liulilaura?lang=zh",
+    "name": "刘莉",
+    "image": "file/showHP.do?d=2234&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liangtingwei?lang=zh",
+    "name": "梁廷伟",
+    "image": "file/showHP.do?d=a2a725ee5fe046c78b28bd42f1289586&&w=84&&h=84&&prevfix=84-",
+    "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "luchangqing?lang=zh",
+    "name": "路常青",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
@@ -5997,6 +6053,27 @@
     "name": "刘显敏",
     "image": "file/showHP.do?d=2011&&w=84&&h=84&&prevfix=84-",
     "faculty": "计算学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liwx?lang=zh",
+    "name": "李文旭",
+    "image": "file/showHP.do?d=2188&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liuwentao?lang=zh",
+    "name": "刘文涛",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "机电工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "yzliu?lang=zh",
+    "name": "刘亚忠",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "机电工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
@@ -6042,6 +6119,34 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lideyu?lang=zh",
+    "name": "黎德育",
+    "image": "file/showHP.do?d=823&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "yyluan?lang=zh",
+    "name": "栾岩",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liuxiujie?lang=zh",
+    "name": "刘秀杰",
+    "image": "file/showHP.do?d=2207&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "weilideutsch?lang=zh",
+    "name": "李薇",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
     "link": "lilingling?lang=zh",
     "name": "李玲玲",
     "image": "file/showHP.do?d=1066&&w=84&&h=84&&prevfix=84-",
@@ -6063,115 +6168,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liulilaura?lang=zh",
-    "name": "刘莉",
-    "image": "file/showHP.do?d=2234&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lijiehong?lang=zh",
-    "name": "李洁红",
-    "image": "file/showHP.do?d=e781401329714b68bcdac7f75ea6cd64&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liuxiujie?lang=zh",
-    "name": "刘秀杰",
-    "image": "file/showHP.do?d=2207&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liangtingwei?lang=zh",
-    "name": "梁廷伟",
-    "image": "file/showHP.do?d=a2a725ee5fe046c78b28bd42f1289586&&w=84&&h=84&&prevfix=84-",
+    "link": "lishunli?lang=zh",
+    "name": "李顺利",
+    "image": "file/showHP.do?d=687&&w=84&&h=84&&prevfix=84-",
     "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lubo?lang=zh",
-    "name": "卢波",
-    "image": "file/showHP.do?d=563&&w=84&&h=84&&prevfix=84-",
-    "faculty": "网络安全和信息化办公室"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liwx?lang=zh",
-    "name": "李文旭",
-    "image": "file/showHP.do?d=2188&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lideyu?lang=zh",
-    "name": "黎德育",
-    "image": "file/showHP.do?d=823&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liangyuanyuan?lang=zh",
-    "name": "梁媛媛",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "yyluan?lang=zh",
-    "name": "栾岩",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lvxiaolei?lang=zh",
-    "name": "吕晓磊",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liuwentao?lang=zh",
-    "name": "刘文涛",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "机电工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "yzliu?lang=zh",
-    "name": "刘亚忠",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "机电工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "luchangqing?lang=zh",
-    "name": "路常青",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lvyan?lang=zh",
-    "name": "吕岩",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "体育部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "weilideutsch?lang=zh",
-    "name": "李薇",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lihaoyu?lang=zh",
-    "name": "李浩宇",
-    "image": "file/showHP.do?d=267a895cbcc646a3a1b048dd9cc5081c&&w=84&&h=84&&prevfix=84-",
-    "faculty": "仪器科学与工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
@@ -6182,27 +6182,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lindanyang?lang=zh",
-    "name": "林丹阳",
-    "image": "file/showHP.do?d=c321e3c725a440cfa8dd4b92430c2d74&&w=84&&h=84&&prevfix=84-",
-    "faculty": "哈尔滨工业大学（威海）"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "lishunli?lang=zh",
-    "name": "李顺利",
-    "image": "file/showHP.do?d=687&&w=84&&h=84&&prevfix=84-",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "angli?lang=zh",
-    "name": "李昂",
-    "image": "file/showHP.do?d=1906&&w=84&&h=84&&prevfix=84-",
-    "faculty": "环境学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
     "link": "lilifang?lang=zh",
     "name": "李丽芳",
     "image": "file/showHP.do?d=2170&&w=84&&h=84&&prevfix=84-",
@@ -6210,10 +6189,45 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "liyan?lang=zh",
+    "name": "李岩",
+    "image": "file/showHP.do?d=807&&w=84&&h=84&&prevfix=84-",
+    "faculty": "交通科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
     "link": "liujian?lang=zh",
     "name": "刘俭",
     "image": "file/showHP.do?d=1756&&w=84&&h=84&&prevfix=84-",
     "faculty": "仪器科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "louxiutao?lang=zh",
+    "name": "娄秀涛",
+    "image": "file/showHP.do?d=2176&&w=84&&h=84&&prevfix=84-",
+    "faculty": "物理学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lihaoyu?lang=zh",
+    "name": "李浩宇",
+    "image": "file/showHP.do?d=267a895cbcc646a3a1b048dd9cc5081c&&w=84&&h=84&&prevfix=84-",
+    "faculty": "仪器科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "lindanyang?lang=zh",
+    "name": "林丹阳",
+    "image": "file/showHP.do?d=c321e3c725a440cfa8dd4b92430c2d74&&w=84&&h=84&&prevfix=84-",
+    "faculty": "哈尔滨工业大学（威海）"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
+    "link": "angli?lang=zh",
+    "name": "李昂",
+    "image": "file/showHP.do?d=1906&&w=84&&h=84&&prevfix=84-",
+    "faculty": "环境学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
@@ -6795,13 +6809,6 @@
     "name": "李跃峰",
     "image": "file/showHP.do?d=1933&&w=84&&h=84&&prevfix=84-",
     "faculty": "机电工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "liyan?lang=zh",
-    "name": "李岩",
-    "image": "file/showHP.do?d=807&&w=84&&h=84&&prevfix=84-",
-    "faculty": "交通科学与工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
@@ -9157,13 +9164,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
-    "link": "louxiutao?lang=zh",
-    "name": "娄秀涛",
-    "image": "file/showHP.do?d=2176&&w=84&&h=84&&prevfix=84-",
-    "faculty": "物理学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=L",
     "link": "luopeng?lang=zh",
     "name": "罗鹏",
     "image": "file/showHP.do?d=2352&&w=84&&h=84&&prevfix=84-",
@@ -9591,6 +9591,27 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
+    "link": "maggiemajun?lang=zh",
+    "name": "马骏",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
+    "link": "mengmeng?lang=zh",
+    "name": "孟勐",
+    "image": "file/showHP.do?d=2198&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
+    "link": "mayuhong?lang=zh",
+    "name": "马玉红",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
     "link": "mafang?lang=zh",
     "name": "马放",
     "image": "file/showHP.do?d=413&&w=84&&h=84&&prevfix=84-",
@@ -9619,24 +9640,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
-    "link": "maggiemajun?lang=zh",
-    "name": "马骏",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
-    "link": "mengmeng?lang=zh",
-    "name": "孟勐",
-    "image": "file/showHP.do?d=2198&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
-    "link": "mayuhong?lang=zh",
-    "name": "马玉红",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
+    "link": "miaodongjing?lang=zh",
+    "name": "苗东菁",
+    "image": "file/showHP.do?d=7fcc75fadf3b4ec283b71addb6ceccef&&w=84&&h=84&&prevfix=84-",
+    "faculty": "计算学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
@@ -9679,13 +9686,6 @@
     "name": "马立扬",
     "image": "file/showHP.do?d=8841bcc1c4354afcbdf26686a8228ff8&&w=84&&h=84&&prevfix=84-",
     "faculty": "土木工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
-    "link": "miaodongjing?lang=zh",
-    "name": "苗东菁",
-    "image": "file/showHP.do?d=7fcc75fadf3b4ec283b71addb6ceccef&&w=84&&h=84&&prevfix=84-",
-    "faculty": "计算学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=M",
@@ -11040,10 +11040,45 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "shenzuochun?lang=zh",
+    "name": "申作春",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "sunqiu?lang=zh",
+    "name": "孙秋",
+    "image": "file/showHP.do?d=819&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "Songjianqiang?lang=zh",
+    "name": "宋建强",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "songfeiyan?lang=zh",
+    "name": "宋飞焱",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
     "link": "shixiaoping?lang=zh",
     "name": "史小平",
     "image": "file/showHP.do?d=250&&w=84&&h=84&&prevfix=84-",
     "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "shaolong?lang=zh",
+    "name": "邵龙",
+    "image": "file/showHP.do?d=490&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
@@ -11068,6 +11103,13 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
+    "link": "shangyankai?lang=zh",
+    "name": "商艳凯",
+    "image": "file/showHP.do?d=eb3e4d89a9d04dd1a47c65d279032cbd&&w=84&&h=84&&prevfix=84-",
+    "faculty": "党委宣传部（全媒体中心、政策研究室）/教师工作部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
     "link": "ysu?lang=zh",
     "name": "苏颖",
     "image": "images/defult-login-img.jpg",
@@ -11082,31 +11124,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "sunjianmin?lang=zh",
-    "name": "孙建敏",
-    "image": "file/showHP.do?d=335&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
     "link": "sunxueyin?lang=zh",
     "name": "孙学银",
     "image": "file/showHP.do?d=de751350a298434ea8e57d260ee2ec33&&w=84&&h=84&&prevfix=84-",
     "faculty": "材料科学与工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "shaolong?lang=zh",
-    "name": "邵龙",
-    "image": "file/showHP.do?d=490&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "shenzuochun?lang=zh",
-    "name": "申作春",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
@@ -11117,20 +11138,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "Songjianqiang?lang=zh",
-    "name": "宋建强",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "songfeiyan?lang=zh",
-    "name": "宋飞焱",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
     "link": "songjianwei?lang=zh",
     "name": "宋建伟",
     "image": "images/defult-login-img.jpg",
@@ -11138,16 +11145,9 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "shangyankai?lang=zh",
-    "name": "商艳凯",
-    "image": "file/showHP.do?d=eb3e4d89a9d04dd1a47c65d279032cbd&&w=84&&h=84&&prevfix=84-",
-    "faculty": "党委宣传部（全媒体中心、政策研究室）/教师工作部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=S",
-    "link": "sunqiu?lang=zh",
-    "name": "孙秋",
-    "image": "file/showHP.do?d=819&&w=84&&h=84&&prevfix=84-",
+    "link": "sunjianmin?lang=zh",
+    "name": "孙建敏",
+    "image": "file/showHP.do?d=335&&w=84&&h=84&&prevfix=84-",
     "faculty": "化工与化学学院"
   },
   {
@@ -12818,10 +12818,59 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wujinzhu?lang=zh",
+    "name": "吴金珠",
+    "image": "file/showHP.do?d=ce6d7212b659490f9ad5e2a2ff6d93b5&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wangxiaokai?lang=zh",
+    "name": "王晓凯",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "计算学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wangzhongbo?lang=zh",
+    "name": "王忠波",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "体育部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wushihua?lang=zh",
+    "name": "吴世华",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "哈尔滨工业大学（威海）"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wangwei?lang=zh",
+    "name": "王卫",
+    "image": "file/showHP.do?d=487&&w=84&&h=84&&prevfix=84-",
+    "faculty": "电气工程及自动化学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
     "link": "wangjing1?lang=zh",
     "name": "王晶",
     "image": "images/defult-login-img.jpg",
     "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wangfusheng?lang=zh",
+    "name": "王福胜",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "经济与管理学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wanglixin?lang=zh",
+    "name": "王立欣",
+    "image": "file/showHP.do?d=478&&w=84&&h=84&&prevfix=84-",
+    "faculty": "深圳校区"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
@@ -12836,6 +12885,27 @@
     "name": "魏尊杰",
     "image": "file/showHP.do?d=162&&w=84&&h=84&&prevfix=84-",
     "faculty": "材料科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wenlili?lang=zh",
+    "name": "温莉莉",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "weili?lang=zh",
+    "name": "魏利",
+    "image": "file/showHP.do?d=1623&&w=84&&h=84&&prevfix=84-",
+    "faculty": "环境学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
+    "link": "wanglizhong?lang=zh",
+    "name": "王利众",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
@@ -12881,55 +12951,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wujinzhu?lang=zh",
-    "name": "吴金珠",
-    "image": "file/showHP.do?d=ce6d7212b659490f9ad5e2a2ff6d93b5&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wangwei?lang=zh",
-    "name": "王卫",
-    "image": "file/showHP.do?d=487&&w=84&&h=84&&prevfix=84-",
-    "faculty": "电气工程及自动化学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wanglixin?lang=zh",
-    "name": "王立欣",
-    "image": "file/showHP.do?d=478&&w=84&&h=84&&prevfix=84-",
-    "faculty": "深圳校区"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wanggang?lang=zh",
-    "name": "王钢",
-    "image": "file/showHP.do?d=188&&w=84&&h=84&&prevfix=84-",
-    "faculty": "电子与信息工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wangfusheng?lang=zh",
-    "name": "王福胜",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "经济与管理学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "archiwangyan?lang=zh",
-    "name": "王岩",
-    "image": "file/showHP.do?d=cb72aa0f60354e4087a03af2696f859f&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wangxiangyu?lang=zh",
-    "name": "王祥玉",
-    "image": "file/showHP.do?d=2291&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
     "link": "meihe?lang=zh",
     "name": "王晶",
     "image": "file/showHP.do?d=2289&&w=84&&h=84&&prevfix=84-",
@@ -12944,20 +12965,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "weili?lang=zh",
-    "name": "魏利",
-    "image": "file/showHP.do?d=1623&&w=84&&h=84&&prevfix=84-",
-    "faculty": "环境学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wenlili?lang=zh",
-    "name": "温莉莉",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
     "link": "wangyuhong?lang=zh",
     "name": "王宇红",
     "image": "images/defult-login-img.jpg",
@@ -12965,38 +12972,31 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wanglizhong?lang=zh",
-    "name": "王利众",
-    "image": "images/defult-login-img.jpg",
+    "link": "wangxiangyu?lang=zh",
+    "name": "王祥玉",
+    "image": "file/showHP.do?d=2291&&w=84&&h=84&&prevfix=84-",
     "faculty": "人文社科学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wangxiaokai?lang=zh",
-    "name": "王晓凯",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "计算学部"
+    "link": "wanggang?lang=zh",
+    "name": "王钢",
+    "image": "file/showHP.do?d=188&&w=84&&h=84&&prevfix=84-",
+    "faculty": "电子与信息工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wangzhongbo?lang=zh",
-    "name": "王忠波",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "体育部"
+    "link": "archiwangyan?lang=zh",
+    "name": "王岩",
+    "image": "file/showHP.do?d=cb72aa0f60354e4087a03af2696f859f&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "wushihua?lang=zh",
-    "name": "吴世华",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "哈尔滨工业大学（威海）"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "Wangshang?lang=zh",
-    "name": "王尚",
-    "image": "file/showHP.do?d=01601bd1f7cd4438818536e68a84798b&&w=84&&h=84&&prevfix=84-",
-    "faculty": "材料科学与工程学院"
+    "link": "leiwanghit?lang=zh",
+    "name": "王磊",
+    "image": "file/showHP.do?d=5b3fc3530e5442558f1d9709b529d9dd&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
@@ -13007,10 +13007,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
-    "link": "leiwanghit?lang=zh",
-    "name": "王磊",
-    "image": "file/showHP.do?d=5b3fc3530e5442558f1d9709b529d9dd&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
+    "link": "Wangshang?lang=zh",
+    "name": "王尚",
+    "image": "file/showHP.do?d=01601bd1f7cd4438818536e68a84798b&&w=84&&h=84&&prevfix=84-",
+    "faculty": "材料科学与工程学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=W",
@@ -15604,6 +15604,13 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
+    "link": "xiexiaoguang?lang=zh",
+    "name": "解晓光",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "交通科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
     "link": "xuexiang?lang=zh",
     "name": "薛祥",
     "image": "file/showHP.do?d=204&&w=84&&h=84&&prevfix=84-",
@@ -15615,6 +15622,13 @@
     "name": "肖会刚",
     "image": "file/showHP.do?d=2132&&w=84&&h=84&&prevfix=84-",
     "faculty": "土木工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
+    "link": "xuliying?lang=zh",
+    "name": "许丽莹",
+    "image": "file/showHP.do?d=b83fae67ddb044e3ac4c816924317073&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
@@ -15632,10 +15646,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
-    "link": "xingyuming?lang=zh",
-    "name": "邢宇明",
+    "link": "xuminqiang?lang=zh",
+    "name": "徐敏强",
     "image": "images/defult-login-img.jpg",
-    "faculty": "数学学院"
+    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
@@ -15646,24 +15660,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
-    "link": "xuliying?lang=zh",
-    "name": "许丽莹",
-    "image": "file/showHP.do?d=b83fae67ddb044e3ac4c816924317073&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
-    "link": "xuminqiang?lang=zh",
-    "name": "徐敏强",
+    "link": "xingyuming?lang=zh",
+    "name": "邢宇明",
     "image": "images/defult-login-img.jpg",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
-    "link": "xiexiaoguang?lang=zh",
-    "name": "解晓光",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "交通科学与工程学院"
+    "faculty": "数学学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=X",
@@ -16388,48 +16388,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yuyanghit?lang=zh",
-    "name": "于洋",
-    "image": "file/showHP.do?d=2331&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yangzunliang?lang=zh",
-    "name": "杨尊亮",
-    "image": "file/showHP.do?d=59c6dce575d24f76990d3235c9c6fda9&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yuanqing?lang=zh",
-    "name": "袁青",
-    "image": "file/showHP.do?d=1166&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yaoyingxue?lang=zh",
-    "name": "姚英学",
-    "image": "file/showHP.do?d=528&&w=84&&h=84&&prevfix=84-",
-    "faculty": "深圳校区"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yanglimei?lang=zh",
-    "name": "杨丽梅",
-    "image": "file/showHP.do?d=2265&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yangliping?lang=zh",
-    "name": "杨莉萍",
-    "image": "file/showHP.do?d=2313&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
     "link": "yanpeigang?lang=zh",
     "name": "颜培刚",
     "image": "file/showHP.do?d=902&&w=84&&h=84&&prevfix=84-",
@@ -16437,31 +16395,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yangyingzi?lang=zh",
-    "name": "杨英姿",
-    "image": "file/showHP.do?d=934&&w=84&&h=84&&prevfix=84-",
-    "faculty": "土木工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yanglin?lang=zh",
-    "name": "杨林",
-    "image": "file/showHP.do?d=886&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yumenglun?lang=zh",
-    "name": "余梦伦",
-    "image": "file/showHP.do?d=1453&&w=84&&h=84&&prevfix=84-",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "yangchunyan?lang=zh",
-    "name": "杨春艳",
-    "image": "file/showHP.do?d=2261&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
+    "link": "yaoyingxue?lang=zh",
+    "name": "姚英学",
+    "image": "file/showHP.do?d=528&&w=84&&h=84&&prevfix=84-",
+    "faculty": "深圳校区"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
@@ -16479,10 +16416,80 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yanglin?lang=zh",
+    "name": "杨林",
+    "image": "file/showHP.do?d=886&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yuyanghit?lang=zh",
+    "name": "于洋",
+    "image": "file/showHP.do?d=2331&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yangzunliang?lang=zh",
+    "name": "杨尊亮",
+    "image": "file/showHP.do?d=59c6dce575d24f76990d3235c9c6fda9&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yangyingzi?lang=zh",
+    "name": "杨英姿",
+    "image": "file/showHP.do?d=934&&w=84&&h=84&&prevfix=84-",
+    "faculty": "土木工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yuanqing?lang=zh",
+    "name": "袁青",
+    "image": "file/showHP.do?d=1166&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yanglimei?lang=zh",
+    "name": "杨丽梅",
+    "image": "file/showHP.do?d=2265&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yangliping?lang=zh",
+    "name": "杨莉萍",
+    "image": "file/showHP.do?d=2313&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
     "link": "yanglonghai?lang=zh",
     "name": "杨龙海",
     "image": "file/showHP.do?d=2021&&w=84&&h=84&&prevfix=84-",
     "faculty": "交通科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yumenglun?lang=zh",
+    "name": "余梦伦",
+    "image": "file/showHP.do?d=1453&&w=84&&h=84&&prevfix=84-",
+    "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "yangchunyan?lang=zh",
+    "name": "杨春艳",
+    "image": "file/showHP.do?d=2261&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
+    "link": "WeiranYao?lang=zh",
+    "name": "姚蔚然",
+    "image": "file/showHP.do?d=eed70c01bf6148efb11f3a2b70f10c9b&&w=84&&h=84&&prevfix=84-",
+    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
@@ -16511,13 +16518,6 @@
     "name": "杨达",
     "image": "file/showHP.do?d=7765cc540aec4d55a21e09936973fc06&&w=84&&h=84&&prevfix=84-",
     "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
-    "link": "WeiranYao?lang=zh",
-    "name": "姚蔚然",
-    "image": "file/showHP.do?d=eed70c01bf6148efb11f3a2b70f10c9b&&w=84&&h=84&&prevfix=84-",
-    "faculty": "航天学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Y",
@@ -18061,6 +18061,62 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhouyuxiang?lang=zh",
+    "name": "周玉祥",
+    "image": "file/showHP.do?d=0ee5a014cd2d4bc78cd34c691daa607a&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhaoyongping?lang=zh",
+    "name": "赵永平",
+    "image": "file/showHP.do?d=358&&w=84&&h=84&&prevfix=84-",
+    "faculty": "仪器科学与工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhuyushen?lang=zh",
+    "name": "祝玉深",
+    "image": "file/showHP.do?d=429afb4636f74707871338b1a6bfb84e&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "homepage?lang=zh",
+    "name": "张廷选",
+    "image": "file/showHP.do?d=42ddb0eca93f4b73a4db06b7ef8ad9f7&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhanglingyan?lang=zh",
+    "name": "张凌岩",
+    "image": "file/showHP.do?d=2238&&w=84&&h=84&&prevfix=84-",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "yizhang?lang=zh",
+    "name": "张一",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "航天学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zuobin?lang=zh",
+    "name": "左斌",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "体育部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhangminghua?lang=zh",
+    "name": "张明华",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
     "link": "zhengbaodong?lang=zh",
     "name": "郑宝东",
     "image": "file/showHP.do?d=133&&w=84&&h=84&&prevfix=84-",
@@ -18079,6 +18135,13 @@
     "name": "张蕊",
     "image": "images/defult-login-img.jpg",
     "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zhaoli?lang=zh",
+    "name": "赵力",
+    "image": "file/showHP.do?d=1980&&w=84&&h=84&&prevfix=84-",
+    "faculty": "化工与化学学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
@@ -18138,6 +18201,20 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "zjy?lang=zh",
+    "name": "赵嘉影",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "人文社科学部"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
+    "link": "leizhao?lang=zh",
+    "name": "赵雷",
+    "image": "images/defult-login-img.jpg",
+    "faculty": "土木工程学院"
+  },
+  {
+    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
     "link": "zhangjie?lang=zh",
     "name": "张杰",
     "image": "file/showHP.do?d=86&&w=84&&h=84&&prevfix=84-",
@@ -18152,62 +18229,6 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhangshanshan?lang=zh",
-    "name": "张姗姗",
-    "image": "file/showHP.do?d=449&&w=84&&h=84&&prevfix=84-",
-    "faculty": "建筑学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhouyuxiang?lang=zh",
-    "name": "周玉祥",
-    "image": "file/showHP.do?d=0ee5a014cd2d4bc78cd34c691daa607a&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhaoyongping?lang=zh",
-    "name": "赵永平",
-    "image": "file/showHP.do?d=358&&w=84&&h=84&&prevfix=84-",
-    "faculty": "仪器科学与工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhuyushen?lang=zh",
-    "name": "祝玉深",
-    "image": "file/showHP.do?d=429afb4636f74707871338b1a6bfb84e&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zjy?lang=zh",
-    "name": "赵嘉影",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "homepage?lang=zh",
-    "name": "张廷选",
-    "image": "file/showHP.do?d=42ddb0eca93f4b73a4db06b7ef8ad9f7&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhanglingyan?lang=zh",
-    "name": "张凌岩",
-    "image": "file/showHP.do?d=2238&&w=84&&h=84&&prevfix=84-",
-    "faculty": "人文社科学部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhaoli?lang=zh",
-    "name": "赵力",
-    "image": "file/showHP.do?d=1980&&w=84&&h=84&&prevfix=84-",
-    "faculty": "化工与化学学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
     "link": "zhangzhichun?lang=zh",
     "name": "张志春",
     "image": "images/defult-login-img.jpg",
@@ -18215,31 +18236,10 @@
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "leizhao?lang=zh",
-    "name": "赵雷",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "土木工程学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "yizhang?lang=zh",
-    "name": "张一",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "航天学院"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zuobin?lang=zh",
-    "name": "左斌",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "体育部"
-  },
-  {
-    "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
-    "link": "zhangminghua?lang=zh",
-    "name": "张明华",
-    "image": "images/defult-login-img.jpg",
-    "faculty": "人文社科学部"
+    "link": "zhangshanshan?lang=zh",
+    "name": "张姗姗",
+    "image": "file/showHP.do?d=449&&w=84&&h=84&&prevfix=84-",
+    "faculty": "建筑学院"
   },
   {
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
@@ -19344,7 +19344,7 @@
     "base": "http://homepage.hit.edu.cn/search-teacher-by-phoneticize?letter=Z",
     "link": "zhangxinchao?lang=zh",
     "name": "张新潮",
-    "image": "images/defult-login-img.jpg",
+    "image": "file/showHP.do?d=2231&&w=84&&h=84&&prevfix=84-",
     "faculty": "电子与信息工程学院"
   },
   {
