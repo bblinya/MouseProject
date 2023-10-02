@@ -38,7 +38,8 @@ def register_arg(func):
             help=func.__doc__)
 
 register_arg(api.hit_edu_cn)
-register_arg(api.ahu_edu_cn)
+# register_arg(api.ahu_edu_cn)
+register_arg(api.pku_edu_cn)
 
 def main(args):
     log.Init(log.name2level(args.verbosity))
