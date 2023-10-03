@@ -163,12 +163,11 @@ def ParseMainrowAndWrite2CSV(mainrow, writer, htmlName):
         logFile.flush()
 
     # institution
-    try:
-        institution = mainrow.find('span', {'class': 'rInstitution'}).get_text()
-    except AttributeError as e:
-        institution = 'Fuck!'
-        logFile.write(htmlName + ' write rInstitution failed...\n')
-        logFile.flush()
+    institutions = mainrow.findAll('span', {'class': 'rInstitution'})
+    institution = ''
+    for item in institutions:
+        # delete \n
+        institution += (item.get_text().replace('\n', '') + 'ROWSPLIT')
 
     col1 = title + 'COLSPLIT'
     col2 = subject + 'COLSPLIT'
