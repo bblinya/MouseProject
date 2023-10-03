@@ -2,17 +2,20 @@ import os
 import json
 import string
 import logging
-from urllib.parse import urljoin
+import urllib.parse
 from os import path
 from hashlib import sha1
 from functools import wraps
 
 from . import index, utils, web
 
-xpath_str_strip = "translate(text(), ' &#9;&#10;&#13', '')"
-xpath_str_len = "string-length({})".format(xpath_str_strip)
+def _bjut_single(faculty, tag, url):
+    return []
 
-def _sicau_single(url: str, faculty: str):
+def bjut_edu_cn():
+    return index.run_faculties("bjut", _bjut_single)
+
+def _sicau_single(faculty, tag, url):
     data = index.xpath_select(
         url_or_path=url,
         root_pat="//div[@class='ming']/a",
@@ -33,7 +36,7 @@ def _sicau_single(url: str, faculty: str):
             ]
     data = data or index.xpath_select(
         url_or_path=url,
-        root_pat=root_pat.format(xpath_str_len),
+        root_pat=root_pat.format(index.xpath_str_len),
         allow_multi= any([w in url for w in whitelist]),
         pat_dict={
             "link": "./ancestor-or-self::a/@href",
@@ -106,7 +109,7 @@ def _sicau_single(url: str, faculty: str):
         if len(name) == 0:
             continue
         assert len(name) > 0 and len(name) < 6, d
-        d["link"] = urljoin(url, d["link"])
+        d["link"] = urllib.parse.urljoin(url, d["link"])
         outs.append(d)
     data = outs
     assert data
@@ -115,39 +118,7 @@ def _sicau_single(url: str, faculty: str):
 @utils.index_cache
 def sicau_edu_cn():
     """ crawler for si chuan university"""
-    l = logging.getLogger("sicau")
-
-    seed = path.join(utils.ROOT, "sources/index/sicau.txt")
-    data = utils.read_seed(seed)
-
-    faculty = None
-    outs, fails = [], []
-    for d in data:
-        if "学院" in d:
-            faculty, link = d.split("：")
-            l.info("process faculty: {}".format(faculty))
-            if len(link) == 0:
-                continue
-
-        tag, link = d.split("：")
-        l.info("tag {} {}".format(tag, link))
-        _f = utils.index_cache(
-            _sicau_single,
-            # cache=False,
-            fname=utils.temp_file(d))
-        out = _f(link, faculty)
-        assert out
-        out = [{"base": link, "faculty": faculty, **v} \
-                for v in out]
-        outs.extend(out)
-
-    l.info("sicau output teachers: {}".format(len(outs)))
-    outs = utils.remove_duplicate(outs, [ "link" ])
-    l.info("sicau dedupl teachers: {}".format(len(outs)))
-    for d in data:
-        fpath = utils.temp_file(d)
-        path.exists(fpath) and os.remove(fpath)
-    return outs
+    return index.run_faculties("sicau", _sicau_single)
 
 def pku_edu_cn():
     """ crawler for pku(peking university), nouse """

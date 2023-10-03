@@ -42,7 +42,7 @@ def register_index_arg(func):
             "--{}".format(func.__name__),
             action="store_true",
             help=func.__doc__)
-    
+
 DATA_FUNCS = {}
 def register_data_arg(func):
     DATA_FUNCS[func.__name__] = func
@@ -51,10 +51,11 @@ def register_data_arg(func):
             action="store_true",
             help=func.__doc__)
 
-register_index_arg(api.hit_edu_cn)
-# register_arg(api.ahu_edu_cn)
-register_index_arg(api.pku_edu_cn)
-register_index_arg(api.sicau_edu_cn)
+for func in dir(api):
+    if func.startswith("_") or "edu_cn" not in func:
+        continue
+    register_index_arg(getattr(api, func))
+
 register_data_arg(data.hit_edu_cn)
 data_parser.add_argument(
     "-o", "--output",

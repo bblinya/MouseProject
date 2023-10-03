@@ -1,3 +1,8 @@
+// 注释以双斜杠开头
+// 空行自动被忽略
+// 所有学院需要带有学院后缀
+// 所有冒号为中文字符
+
 理学院：
 应用数学系：https://lixueyuan.sicau.edu.cn/szdw1/xsry1/yysxx.htm
 应用物理系：https://lixueyuan.sicau.edu.cn/szdw1/xsry1/yywlx.htm

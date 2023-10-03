@@ -3,15 +3,19 @@ import logging
 from functools import wraps
 from dataclasses import dataclass
 
+import os
 import json
 from os import path
 
 from lxml import html, etree
 import lxml.html.clean
 
-from . import web
+from . import web, utils
 
 logger = logging.getLogger("index")
+
+xpath_str_strip = "translate(text(), ' &#9;&#10;&#13', '')"
+xpath_str_len = "string-length({})".format(xpath_str_strip)
 
 target_str = lambda v: "".join(
     [c for c in str(v).replace(" ", "") if c.isprintable()])
@@ -58,6 +62,47 @@ def xpath_select(
             out[k] = multi_process(v) or None
         teacher_infos.append(out)
     return teacher_infos
+
+def read_faculties(seed: str):
+    _split = lambda v: [c.strip() for c in v.split("：")]
+
+    data = utils.read_seed(seed)
+    faculty = None
+    outs = []
+    for d in data:
+        if "学院" in d:
+            faculty, link = _split(d)
+            if len(link) == 0:
+                continue
+        outs.append((faculty, *_split(d)))
+    return outs
+
+def run_faculties(seed, func, dup_keys = [ "link" ]):
+    l = logging.getLogger(seed)
+    spath = path.join(
+            utils.ROOT, "sources/index", seed + ".txt")
+    outs = []
+    data = read_faculties(spath)
+    for (faculty, tag, link) in data:
+        l.info("process {} > {} > {}".format(
+            faculty, tag, link))
+        _f = utils.index_cache(
+            func, cache=False,
+            fname=utils.temp_file(seed + link))
+        out = _f(faculty, tag, link)
+        assert out
+        out = [{
+            "faculty": faculty, "tag": tag, "base": link,
+            **v} for v in out]
+        outs.extend(out)
+
+    l.info("{} output teachers: {}".format(seed, len(outs)))
+    outs = utils.remove_duplicate(outs, keys=dup_keys)
+    l.info("{} dedupl teachers: {}".format(seed, len(outs)))
+    for (_, _, link) in data:
+        fpath = utils.temp_file(seed + link)
+        path.exists(fpath) and os.remove(fpath)
+    return outs
 
 def title(url_or_path: str, **kw):
     attrs = {
