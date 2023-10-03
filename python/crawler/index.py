@@ -1,6 +1,7 @@
 import typing
 import logging
 from functools import wraps
+from urllib.parse import urljoin
 from dataclasses import dataclass
 
 import os
@@ -20,6 +21,8 @@ xpath_str_len = "string-length({})".format(xpath_str_strip)
 target_str = lambda v: "".join(
     [c for c in str(v).replace(" ", "") if c.isprintable()])
 target_multi_str = lambda v: "".join(v)
+
+PatAttrsT = typing.Dict[str, str]
 
 def xpath_select(
         url_or_path: str,
@@ -90,7 +93,7 @@ def run_faculties(seed, func, dup_keys = [ "link" ]):
             func, cache=False,
             fname=utils.temp_file(seed + link))
         out = _f(faculty, tag, link)
-        assert out
+        assert out, "output is empty"
         out = [{
             "faculty": faculty, "tag": tag, "base": link,
             **v} for v in out]
@@ -103,6 +106,32 @@ def run_faculties(seed, func, dup_keys = [ "link" ]):
         fpath = utils.temp_file(seed + link)
         path.exists(fpath) and os.remove(fpath)
     return outs
+
+def validate_index_attrs(
+        base: str,
+        data: typing.List[PatAttrsT]
+        ) -> typing.List[PatAttrsT]:
+    outs = []
+    for d in data:
+        assert "name" in d, "attrs no key:name"
+        assert "link" in d, "attrs no key:link"
+        name = d["name"]
+        name = name.removesuffix("副教授")
+        name = name.removesuffix("教授")
+        name = name.removesuffix("讲师")
+        if len(name) == 0:
+            continue
+        if "·" in name:
+            assert len(name) < 10, d
+        else:
+            assert len(name) < 6, d
+        d["name"] = name
+        d["link"] = urljoin(base, d["link"])
+        outs.append(d)
+
+    assert outs, "data output is empty"
+    return outs
+
 
 def title(url_or_path: str, **kw):
     attrs = {

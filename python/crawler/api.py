@@ -10,8 +10,35 @@ from functools import wraps
 from . import index, utils, web
 
 def _bjut_single(faculty, tag, url):
-    return []
+    data = []
+    div_classes = [
+            'listR floatR w680',
+            'ny_right_con',
+            'zhy']
+    div_classes = " or ".join([
+        "@class='%s'" % s for s in div_classes])
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[{}]//ul/li/a".format(div_classes),
+        pat_dict={ "link": "./@href", "name": "./text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='teacher-name']/a",
+        pat_dict={ "link": "./@href", "name": "./text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='teacher_pic']/ul/a",
+        pat_dict={
+            "link": "./@href",
+            "name": "./li/span/text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@id='vsb_content']/p/a",
+        pat_dict={ "link": "./@href", "name": "./text()" })
+    index.validate_index_attrs(url, data)
+    return data
 
+@utils.index_cache
 def bjut_edu_cn():
     return index.run_faculties("bjut", _bjut_single)
 
