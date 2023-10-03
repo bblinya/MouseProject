@@ -1,4 +1,4 @@
-import os
+import os, re
 import json
 import string
 import logging
@@ -35,7 +35,6 @@ def _bjut_single(faculty, tag, url):
         url_or_path=url,
         root_pat="//div[@id='vsb_content']/p/a",
         pat_dict={ "link": "./@href", "name": "./text()" })
-    index.validate_index_attrs(url, data)
     return data
 
 @utils.index_cache
@@ -147,9 +146,48 @@ def sicau_edu_cn():
     """ crawler for si chuan university"""
     return index.run_faculties("sicau", _sicau_single)
 
+def _pku_single(faculty, tag, url):
+    data = []
+    if url == "https://chinese.pku.edu.cn/szdw/zzjs/index.htm":
+        data = index.api_json(
+            url, "/common/shizi.json", "data", {
+                "title": "name",
+                "url": "link",
+                "viceTitle": "viceTitle"})
+    elif url == "https://chinese.pku.edu.cn/szdw/ltxjs/index.htm":
+        data = index.api_json(
+            url, "/common/ltxshizi.json", "data", {
+                "title": "name",
+                "url": "link",
+                "viceTitle": "viceTitle"})
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//ul[@class='list_con01']/li//a",
+        pat_dict={ "link": "./@href", "name": "./text()" })
+    div_classes = [ 'newsList', 'minglu', ]
+    div_classes = " or ".join([
+        "@class='%s'" % s for s in div_classes])
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[{}]//ul/li/a".format(div_classes),
+        pat_dict={ "link": "./@href", "name": "./text()" })
+
+    outs = []
+    for d in data:
+        name = d["name"]
+        if name == "行政教辅人员":
+            continue
+        name = name.removeprefix("主任：")
+        name = name.removeprefix("副主任：")
+        name = re.sub("（.*?）$", "", name)
+        d["name"] = name
+        outs.append(d)
+    return outs
+
+@utils.index_cache
 def pku_edu_cn():
     """ crawler for pku(peking university), nouse """
-    pass
+    return index.run_faculties("pku", _pku_single)
 
 # data/学校/院系/姓名.html
 # data/index.txt

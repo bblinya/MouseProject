@@ -60,9 +60,14 @@ def xpath_select(
                     ele_str, pat_dict[k], v)
             v = [ target_process(d) for d in v ]
             v = [ d for d in v if d ]
-            assert allow_empty or len(v) > 0, msg
-            assert allow_multi or len(v) < 2, msg
-            out[k] = multi_process(v) or None
+            if len(v) == 0:
+                assert allow_empty, msg
+                out[k] = None
+            elif len(v) == 1:
+                out[k] = v[0]
+            else:
+                assert allow_multi, msg
+                out[k] = multi_process(v)
         teacher_infos.append(out)
     return teacher_infos
 
@@ -73,12 +78,28 @@ def read_faculties(seed: str):
     faculty = None
     outs = []
     for d in data:
+        #  print(d)
         if "学院" in d:
             faculty, link = _split(d)
             if len(link) == 0:
                 continue
-        outs.append((faculty, *_split(d)))
+        tag, link = _split(d)
+        outs.append((faculty, tag, link))
     return outs
+
+def api_json(
+        base: str, urlpath: str, key: str,
+        trans: typing.Dict[str, str] = {}):
+    url = urljoin(base, urlpath)
+    data = web.get_url_content(url, error=False)
+    if not data:
+        return []
+    data = json.loads(data)
+    for k in key.split("."):
+        data = data[k]
+    data = [{v: d[k] for k, v in trans.items()} \
+            for d in data]
+    return data
 
 def run_faculties(seed, func, dup_keys = [ "link" ]):
     l = logging.getLogger(seed)
@@ -86,14 +107,18 @@ def run_faculties(seed, func, dup_keys = [ "link" ]):
             utils.ROOT, "sources/index", seed + ".txt")
     outs = []
     data = read_faculties(spath)
+
     for (faculty, tag, link) in data:
+        def _func_wrapper(*args):
+            data = func(*args)
+            return validate_index_attrs(link, data)
+
         l.info("process {} > {} > {}".format(
             faculty, tag, link))
         _f = utils.index_cache(
-            func, cache=False,
+            _func_wrapper, cache=False,
             fname=utils.temp_file(seed + link))
         out = _f(faculty, tag, link)
-        assert out, "output is empty"
         out = [{
             "faculty": faculty, "tag": tag, "base": link,
             **v} for v in out]
@@ -123,6 +148,7 @@ def validate_index_attrs(
             continue
         if "·" in name:
             assert len(name) < 10, d
+        #  elif any(c.isalpha() for c in name)
         else:
             assert len(name) < 6, d
         d["name"] = name
