@@ -2,23 +2,22 @@ import os
 import json
 import string
 import logging
+from urllib.parse import urljoin
 from os import path
 from hashlib import sha1
 from functools import wraps
 
 from . import index, utils, web
 
-def _sicau_single(url: str):
+xpath_str_strip = "translate(text(), ' &#9;&#10;&#13', '')"
+xpath_str_len = "string-length({})".format(xpath_str_strip)
+
+def _sicau_single(url: str, faculty: str):
     data = index.xpath_select(
         url_or_path=url,
         root_pat="//div[@class='ming']/a",
-        pat_dict={ "link": "./@href", "name": ".//text()" })
-    data = data or index.xpath_select(
-        url_or_path=url,
-        root_pat="//tr/td[descendant::a]",
-        pat_dict={
-            "link": ".//a/@href",
-            "name": ".//text()" })
+        pat_dict={ "link": "./@href", "name": ".//text()"
+        })
     data = data or index.xpath_select(
         url_or_path=url,
         root_pat="//div[@class='decoration']",
@@ -27,11 +26,18 @@ def _sicau_single(url: str):
             "link": "./div[last()]/a/@href",
             "name": "./div[1]/span//text()",
             })
+    root_pat = "//div[@id='vsb_content']//*[ancestor-or-self::a and {} > 0]"
+    whitelist = [
+            "spxy.sicau.edu.cn/szdw/js.htm",
+            "rwy.sicau.edu.cn/index/xygk/szdw/qngg.htm",
+            ]
     data = data or index.xpath_select(
         url_or_path=url,
-        root_pat="//div[@id='vsb_content']//p//a//*[string-length(text()) > 0]",
-        pat_dict={ "link": "./parent::a/@href", "name": ".//text()" }
-        )
+        root_pat=root_pat.format(xpath_str_len),
+        allow_multi= any([w in url for w in whitelist]),
+        pat_dict={
+            "link": "./ancestor-or-self::a/@href",
+            "name": "./ancestor-or-self::a//text()" })
     data = data or index.xpath_select(
         url_or_path=url,
         root_pat="//div[@class='teacher-name']/a",
@@ -44,17 +50,65 @@ def _sicau_single(url: str):
         )
     data = data or index.xpath_select(
         url_or_path=url,
-        root_pat="//div[@class='teacher']/a[@href]",
+        root_pat="//div[@class='teacher']/a",
+        allow_empty=True,
         pat_dict={
           "link": "./@href",
-          "name": "./div[@class='teacher-name']//text()" }
-        )
+          "name": "./div[@class='teacher-name']/span/text()"
+        })
     data = data or index.xpath_select(
         url_or_path=url,
         root_pat="//div[@class='teacher_list']//ul/li/a",
-        pat_dict={ "link": "./@href", "name": ".//text()" }
+        pat_dict={ "link": "./@href", "name": "./h1/text()" }
         )
-    data = [d for d in data if d["link"]]
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@id='fitslist']/dl/dt/a",
+        pat_dict={ "link": "./@href", "name": "./text()" }
+        ) # 9
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='ldtz']/ul/li/a",
+        pat_dict={
+            "link": "./@href",
+            "name": "./div[@class='ldtz-info']/h3/text()" }
+        ) # 10
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//li[contains(@id, 'line_u4')]/a",
+        pat_dict={
+            "link": "./@href",
+            "name": "./div[@class='b_span']/text()" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//li[contains(@id, 'line_u7')]/a",
+        pat_dict={ "link": "./@href", "name": "./@title" }
+        )
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='main_conRCa']/ul/div/a",
+        pat_dict={ "link": "./@href", "name": "./h3/text()" }
+        )
+    data = [d for d in data if d["name"]]
+    outs = []
+    blacklist = [
+        '导师', 'http', '四川', '专家' ]
+    for d in data:
+        name = d["name"]
+        if any([k in name for k in blacklist]):
+            continue
+        name = name.removeprefix("人文学院教师风采——")
+        name = name.removesuffix("副教授")
+        name = name.removesuffix("教授")
+        name = name.removesuffix("讲师")
+        d["name"] = name
+        if len(name) == 0:
+            continue
+        assert len(name) > 0 and len(name) < 6, d
+        d["link"] = urljoin(url, d["link"])
+        outs.append(d)
+    data = outs
     assert data
     return data
 
@@ -79,16 +133,21 @@ def sicau_edu_cn():
         l.info("tag {} {}".format(tag, link))
         _f = utils.index_cache(
             _sicau_single,
-            fname=utils.temp_file(d), cache=False)
-        out = _f(link)
+            # cache=False,
+            fname=utils.temp_file(d))
+        out = _f(link, faculty)
         assert out
-        out = [{"base": link, **v} for v in out]
+        out = [{"base": link, "faculty": faculty, **v} \
+                for v in out]
         outs.extend(out)
 
-    for i, _ in enumerate(data):
-        os.remove(utils.temp_file(d))
+    l.info("sicau output teachers: {}".format(len(outs)))
+    outs = utils.remove_duplicate(outs, [ "link" ])
+    l.info("sicau dedupl teachers: {}".format(len(outs)))
+    for d in data:
+        fpath = utils.temp_file(d)
+        path.exists(fpath) and os.remove(fpath)
     return outs
-
 
 def pku_edu_cn():
     """ crawler for pku(peking university), nouse """

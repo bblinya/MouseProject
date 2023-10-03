@@ -14,7 +14,7 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from . import utils
+from . import utils, log
 
 web_logger = logging.getLogger("web")
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -72,7 +72,8 @@ def get_url_content(
         url: str,
         dyn_type: typing.Optional[str]) -> str:
     cache = utils.temp_file(url)
-    web_logger.debug("cache {} from {}".format(cache, url))
+    web_logger.log(
+            log.TRACE, "cache {} from {}".format(cache, url))
 
     if path.exists(cache):
         with open(cache, "r") as f:

@@ -34,6 +34,24 @@ def index_cache(func, fname=None, cache=True,):
         return data
     return _wrapper
 
+PatAttrsT = typing.Dict[str, str]
+def remove_duplicate(
+        data: typing.List[PatAttrsT],
+        keys: typing.List[str],
+        valid_keys: typing.List[str] = [],
+        ) -> typing.List[PatAttrsT]:
+    key_dict = {}
+    for d in data:
+        val = "_".join([d[k] for k in keys])
+        if val in key_dict:
+            assert all([d[k] == key_dict[val][k] \
+                    for k in valid_keys]), (
+                "{} vs. {}").format(d, key_dict[val])
+        else:
+            key_dict[val] = d
+    return list(key_dict.values())
+
+
 def temp_file(seed: str):
     temp_root = path.join(tempfile.gettempdir(), "mouse_web")
     if not path.exists(temp_root):
