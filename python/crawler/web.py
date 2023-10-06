@@ -66,7 +66,6 @@ def get_dynamic_url(url: str) -> str:
     #  options.add_argument("--disable-blink-features=AutomationControlled")
     driver = _get_driver()
     driver.get(url)
-    time.sleep(10)
     # driver.find_element(By.XPATH, "//div")
     return driver.page_source
 
@@ -88,6 +87,7 @@ def get_url_content(
     else:
         data = get_dynamic_url(url, **kwargs)
 
+    time.sleep(1)
     with open(cache, "w") as f:
         f.write(data)
     return data

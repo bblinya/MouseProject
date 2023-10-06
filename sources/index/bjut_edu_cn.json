@@ -2348,7 +2348,7 @@
     "faculty": "城市建设学院",
     "tag": "城市建设学院",
     "base": "https://facte.bjut.edu.cn/szdw/jsjs.htm",
-    "link": "https://facte.bjut.edu.cn/szdw/jsjs.htm",
+    ":link": "https://facte.bjut.edu.cn/szdw/jsjs.htm",
     "name": "曹鹏"
   },
   {
@@ -8627,7 +8627,7 @@
     "faculty": "信息学院",
     "tag": "电子科学与技术系",
     "base": "https://xxxb.bjut.edu.cn/szdw/jsjs1/dzkxyjsx.htm",
-    "link": "https://xxxb.bjut.edu.cn/szdw/jsjs1/dzkxyjsx.htm",
+    ":link": "https://xxxb.bjut.edu.cn/szdw/jsjs1/dzkxyjsx.htm",
     "name": "贾云鹏"
   },
   {
@@ -9369,7 +9369,7 @@
     "faculty": "信息学院",
     "tag": "信息与通信工程系",
     "base": "https://xxxb.bjut.edu.cn/szdw/jsjs1/xxytxgcx.htm",
-    "link": "https://xxxb.bjut.edu.cn/szdw/jsjs1/xxytxgcx.htm",
+    ":link": "https://xxxb.bjut.edu.cn/szdw/jsjs1/xxytxgcx.htm",
     "name": "施远征"
   },
   {
@@ -9383,7 +9383,7 @@
     "faculty": "环境与生命学院",
     "tag": "环境与生命学院",
     "base": "https://fel.bjut.edu.cn/szdw/jsjs1.htm",
-    "link": "https://fel.bjut.edu.cn/szdw/jsjs1.htm",
+    ":link": "https://fel.bjut.edu.cn/szdw/jsjs1.htm",
     "name": "蔡建宇"
   },
   {
@@ -11378,7 +11378,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "http://yanzhao.bjut.edu.cn/ds/7/202039/15837187972099267_1.html",
+    ":link": "http://yanzhao.bjut.edu.cn/ds/7/202039/15837187972099267_1.html",
     "name": "李泉林"
   },
   {
@@ -11609,7 +11609,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "http://yanzhao.bjut.edu.cn/ds/7/2018716/15317106804099177_1.html",
+    ":link": "http://yanzhao.bjut.edu.cn/ds/7/2018716/15317106804099177_1.html",
     "name": "韩新伟"
   },
   {
@@ -11686,7 +11686,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "http://yanzhao.bjut.edu.cn/ds/7/2018719/15319885692996618_1.html",
+    ":link": "http://yanzhao.bjut.edu.cn/ds/7/2018719/15319885692996618_1.html",
     "name": "邢李志"
   },
   {
@@ -11700,7 +11700,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "http://yanzhao.bjut.edu.cn/ds/7/201934/15516872917206414_1.html",
+    ":link": "http://yanzhao.bjut.edu.cn/ds/7/201934/15516872917206414_1.html",
     "name": "徐磊"
   },
   {
@@ -11728,7 +11728,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "http://yanzhao.bjut.edu.cn/ds/7/2015626/1435288459439_1.html",
+    ":link": "http://yanzhao.bjut.edu.cn/ds/7/2015626/1435288459439_1.html",
     "name": "杨松令"
   },
   {
@@ -11826,7 +11826,7 @@
     "faculty": "经济与管理学院",
     "tag": "经济与管理学院",
     "base": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
-    "link": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
+    ":link": "https://www.bjut.edu.cn/jjyglxy/szdw/szxq/axpx.htm",
     "name": "李军英"
   },
   {
@@ -11847,7 +11847,7 @@
     "faculty": "北京人工智能研究院学院",
     "tag": "北京人工智能研究院学院",
     "base": "https://biai.bjut.edu.cn/szdw/jsdw.htm",
-    "link": "https://biai.bjut.edu.cn/szdw/jsdw.htm",
+    ":link": "https://biai.bjut.edu.cn/szdw/jsdw.htm",
     "name": "李晓理"
   },
   {

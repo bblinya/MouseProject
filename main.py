@@ -57,6 +57,9 @@ for func in dir(api):
     register_index_arg(getattr(api, func))
 
 register_data_arg(data.hit_edu_cn)
+register_data_arg(data.sicau_edu_cn)
+register_data_arg(data.bjut_edu_cn)
+
 data_parser.add_argument(
     "-o", "--output",
     default=path.join(utils.ROOT, "sources/data"),

@@ -983,7 +983,7 @@
     "faculty": "食品学院",
     "tag": "教授",
     "base": "https://spxy.sicau.edu.cn/szdw/js.htm",
-    "link": "https://spxy.sicau.edu.cn/info/1061/14637.htm",
+    ":link": "https://spxy.sicau.edu.cn/info/1061/14637.htm",
     "name": "张清"
   },
   {
