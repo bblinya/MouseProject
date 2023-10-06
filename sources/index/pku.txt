@@ -36,7 +36,7 @@
 荣休教师：http://www.art.pku.edu.cn/szdw/rxjs/index.htm
 
 对外汉语教育学院：
-师资队伍：https://hanyu.pku.edu.cn/xyjs/szdw/zmjs/a/index.htm
+// 师资队伍：https://hanyu.pku.edu.cn/xyjs/szdw/zmjs/a/index.htm
 离退休人员：https://hanyu.pku.edu.cn/xyjs/szdw/ltxry/index.htm
 
 歌剧研究院学院：https://opera.pku.edu.cn/sztd/qzjs/index.htm
@@ -57,7 +57,7 @@
 
 政府管理学院：
 在职教师：https://www.sg.pku.edu.cn/szdw/zzjs/index.htm
-荣休教师：https://www.sg.pku.edu.cn/szdw/rxjs/index.htm
+// 荣休教师：https://www.sg.pku.edu.cn/szdw/rxjs/index.htm
 
 马克思主义学院：
 教学科研人员：https://marxism.pku.edu.cn/szll/jxkyry/index.htm
@@ -81,7 +81,7 @@
 
 光华管理学院：
 全职教授：https://www.gsm.pku.edu.cn/202106gb/jsjj.jsp?urltype=tree.TreeTempUrl&wbtreeid=1184
-荣休教授：https://www.gsm.pku.edu.cn/faculty_and_research/szdw/rxjs.htm
+// 荣休教授：https://www.gsm.pku.edu.cn/faculty_and_research/szdw/rxjs.htm
 
 人口研究所学院：https://ipr.pku.edu.cn/jsdw/zzjs/index.htm
 

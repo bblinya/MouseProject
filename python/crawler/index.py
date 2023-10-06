@@ -15,9 +15,6 @@ from . import web, utils
 
 logger = logging.getLogger("index")
 
-xpath_str_strip = "translate(text(), ' &#9;&#10;&#13', '')"
-xpath_str_len = "string-length({})".format(xpath_str_strip)
-
 target_str = lambda v: "".join(
     [c for c in str(v).replace(" ", "") if c.isprintable()])
 target_multi_str = lambda v: "".join(v)
@@ -87,36 +84,48 @@ def read_faculties(seed: str):
         outs.append((faculty, tag, link))
     return outs
 
-def api_json(
-        base: str, urlpath: str, key: str,
-        trans: typing.Dict[str, str] = {}):
-    url = urljoin(base, urlpath)
+def json_url(url):
     data = web.get_url_content(url, error=False)
     if not data:
-        return []
-    data = json.loads(data)
-    for k in key.split("."):
-        data = data[k]
-    data = [{v: d[k] for k, v in trans.items()} \
-            for d in data]
+        return {}
+    return json.loads(data)
+
+def data_map(
+        data: typing.List[typing.Dict[str, str]],
+        *selects: typing.List[str],
+        **tranforms: typing.Dict[str, str]):
+    return [{
+        **{k: d[k] for k in selects},
+        **{v: d[k] for k, v in tranforms.items()}
+        } for d in data]
+
+def data_trans(
+        data: typing.List[typing.Dict[str, str]],
+        **tranforms: typing.Dict[str, typing.Any]):
+    for d in data:
+        for k, v in tranforms.items():
+            d[k] = v(d[k])
     return data
 
-def run_faculties(seed, func, dup_keys = [ "link" ]):
+def run_faculties(
+        seed, func,
+        mix_seeds: typing.List[str] = [],
+        dup_keys = [ "link" ]):
     l = logging.getLogger(seed)
     spath = path.join(
             utils.ROOT, "sources/index", seed + ".txt")
     outs = []
     data = read_faculties(spath)
 
-    for (faculty, tag, link) in data:
+    for (faculty, tag, link) in [*mix_seeds, *data]:
         def _func_wrapper(*args):
             data = func(*args)
             return validate_index_attrs(link, data)
 
-        l.info("process {} > {} > {}".format(
+        l.info("process {} >{} >{}".format(
             faculty, tag, link))
         _f = utils.index_cache(
-            _func_wrapper, cache=False,
+            _func_wrapper, # cache=False,
             fname=utils.temp_file(seed + link))
         out = _f(faculty, tag, link)
         out = [{
@@ -134,7 +143,8 @@ def run_faculties(seed, func, dup_keys = [ "link" ]):
 
 def validate_index_attrs(
         base: str,
-        data: typing.List[PatAttrsT]
+        data: typing.List[PatAttrsT],
+        allow_empty: bool = False,
         ) -> typing.List[PatAttrsT]:
     outs = []
     for d in data:
@@ -148,16 +158,16 @@ def validate_index_attrs(
             continue
         if "·" in name:
             assert len(name) < 10, d
-        #  elif any(c.isalpha() for c in name)
+        elif any(c.isalpha() for c in name):
+            assert len(name) < 25, d
         else:
             assert len(name) < 6, d
         d["name"] = name
         d["link"] = urljoin(base, d["link"])
         outs.append(d)
 
-    assert outs, "data output is empty"
+    assert allow_empty or outs, "data output is empty"
     return outs
-
 
 def title(url_or_path: str, **kw):
     attrs = {
