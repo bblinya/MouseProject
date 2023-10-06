@@ -169,6 +169,20 @@ def _pku_single(faculty, tag, url):
                 user_id="link", zhiwu="viceTitle")
         data = index.data_trans(data,
                 link=lambda v: "/faculty/%s/" % v)
+    elif url == "https://www.phbs.pku.edu.cn/teacher/teachers/fulltime/":
+        data = index.json_url(
+            "https://api.phbs.pku.edu.cn/ch/teacher/index?catid=459",)
+        data = index.data_map(
+                data["data"],
+                title="name", url="link",
+                zhicheng="viceTitle", dt_degree_type="tag")
+    elif url == "https://www.phbs.pku.edu.cn/teacher/teachers/fulltimefaculty/":
+        data = index.json_url(
+            "https://api.phbs.pku.edu.cn/ch/teacher/index?catid=1537",)
+        data = index.data_map(
+                data["data"],
+                title="name", url="link",
+                zhicheng="viceTitle", dt_degree_type="tag")
 
     in_cls = xpath.in_cls('list_con01', 'm-list9', 'dList_info')
     data = data or index.xpath_select(
@@ -177,7 +191,7 @@ def _pku_single(faculty, tag, url):
         pat_dict={ "link": "./@href", "name": "./text()" })
     div_classes = [
             'page_content', 'minglu', 'newsList',
-            'boxIn', 'Miss', ]
+            'boxIn', 'Miss', 'pageArticle']
     in_cls = xpath.in_cls(*div_classes)
     data = data or index.xpath_select(
         url_or_path=url,
@@ -193,7 +207,8 @@ def _pku_single(faculty, tag, url):
             "link": "./@href",
             "name": ".//div[@class='name']//text()" })
     in_cls = xpath.in_cls(
-            'middle', 'ej_list', 'content_right')
+            'ej_list', 'content_right',
+            'teacher-box', 'list-box')
     data = data or index.xpath_select(
         url_or_path=url,
         root_pat="//div[%s]//ul/li//a[@title]" % in_cls,
@@ -214,9 +229,14 @@ def _pku_single(faculty, tag, url):
         pat_dict={
             "link": "./@href",
             "name": "./span/i/text()" })
+    in_cls = xpath.in_cls("content-right")
     data = data or index.xpath_select(
         url_or_path=url,
-        root_pat="//div[@class='content-right']//tr/td/a",
+        root_pat="//div[%s]//tr/td/a[@title]" % in_cls,
+        pat_dict={ "link": "./@href", "name": "./@title" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='view-content']//tr/td/h3/a[@title]",
         pat_dict={ "link": "./@href", "name": "./@title" })
     data = data or index.xpath_select(
         url_or_path=url, allow_multi=True,
@@ -246,6 +266,33 @@ def _pku_single(faculty, tag, url):
         url_or_path=url,
         root_pat="//div[@class='media']//h4/a[@title]",
         pat_dict={ "link": "./@href", "name": "./@title" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='men']/dl/dd",
+        allow_empty=True,
+        pat_dict={
+            "link": "./p/a/@href",
+            "name": "./h4/text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='zzjs1M2nr']/p/a",
+        pat_dict={ "link": "./@href", "name": "./text()" })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='main_content']/dl/dd/a[@title]",
+        pat_dict={ "link": "./@href", "name": "./@title" })
+    in_ids = xpath.in_ids("dt_right")
+    in_cls = xpath.in_cls("list", "faculty")
+    pat = xpath.ex(in_ids, in_cls)
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[%s]//a[@title]" % pat,
+        pat_dict={ "link": "./@href", "name": "./@title" })
+    in_cls = xpath.in_cls("list_box_shizi")
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//ul[%s]//a[@title]" % in_cls,
+        pat_dict={ "link": "./@href", "name": "./@title" })
 
     outs = []
     for d in data:
@@ -267,8 +314,18 @@ def pku_edu_cn():
             if c not in [
                 'a', 'b', 'e', 'f', 'g', 'i', 'n', 'o',
                 'p', 't', 'u', 'v']]
-    seeds = [( "对外汉语教育学院", "师资队伍", s) \
+    mix_seeds = [( "对外汉语教育学院", "师资队伍", s) \
             for s in seeds]
+
+    seed = "https://bicmr.pku.edu.cn/cn/content/lists/11{}.html"
+    seeds = [seed.format("_catid74_" + str(i)) for i in range(2, 5)]
+    seeds = [("国际数学研究中心学院", "教研人员", s) for s in seeds]
+    mix_seeds.extend(seeds)
+
+    seed = "https://www.ece.pku.edu.cn/szdw/js1/%i.htm"
+    seeds = [seed % i for i in range(1, 5)]
+    seeds = [("信息工程学院", "信息工程学院", s) for s in seeds]
+    mix_seeds.extend(seeds)
     return index.run_faculties(
             "pku", _pku_single, mix_seeds=seeds)
 

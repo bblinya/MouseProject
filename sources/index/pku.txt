@@ -120,11 +120,11 @@
 
 国际数学研究中心学院：
 教研人员：https://bicmr.pku.edu.cn/cn/content/lists/11.html
-研究技术系列：https://bicmr.pku.edu.cn/cn/content/lists/84.html
+// 研究技术系列：https://bicmr.pku.edu.cn/cn/content/lists/84.html
 
 科维理天文与天体物理研究所学院：http://kiaa.pku.edu.cn/cn/People/kyry.htm
 
-核科学与技术研究院学院：http://inst.pku.edu.cn/sysjzgml/index.htm
+// 核科学与技术研究院学院：http://inst.pku.edu.cn/sysjzgml/index.htm
 
 现代农学院：
 教研系列：http://www.saas.pku.edu.cn/sztd/kyxl/index.htm
@@ -140,6 +140,7 @@
 
 环境与能源学院：
 教师风采：https://see.pkusz.edu.cn/szdw/jsfc.htm
+教师风采：https://see.pkusz.edu.cn/szdw/jsfc/1.htm
 研究人员：https://see.pkusz.edu.cn/szdw/yjry.htm
 
 城市规划与设计学院：https://urban.pkusz.edu.cn/szdw/jsfc.htm

@@ -125,7 +125,7 @@ def run_faculties(
         l.info("process {} >{} >{}".format(
             faculty, tag, link))
         _f = utils.index_cache(
-            _func_wrapper, # cache=False,
+            _func_wrapper, cache=False,
             fname=utils.temp_file(seed + link))
         out = _f(faculty, tag, link)
         out = [{
@@ -150,11 +150,15 @@ def validate_index_attrs(
     for d in data:
         assert "name" in d, "attrs no key:name"
         assert "link" in d, "attrs no key:link"
+        if d["link"] is None:
+            continue
         name = d["name"]
         name = name.removesuffix("副教授")
         name = name.removesuffix("教授")
+        name = name.removesuffix("兼职教师")
+        name = name.removesuffix("教师")
         name = name.removesuffix("讲师")
-        if len(name) == 0:
+        if len(name) == 0 or len(d["link"]) < 2:
             continue
         if "·" in name:
             assert len(name) < 10, d
