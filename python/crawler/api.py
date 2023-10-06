@@ -9,6 +9,72 @@ from functools import wraps
 
 from . import index, utils, web, xpath
 
+def _bjtu_single(faculty, tag, url):
+
+    data = []
+    if "soms.bjtu.edu.cn/szdw/jsml" in url:
+        data = index.json_url(
+            "https://welcome.bjtu.edu.cn/v4/api/get?department=%s" % tag)
+        data = index.data_map(data, "name",
+                url="link", duty="viceTitle",
+                department="tag",)
+    elif "saad.bjtu.edu.cn/szll/" in url:
+        web.get_url_content(url, dyn_type="Chrome")
+
+    in_cls = xpath.in_cls(
+            "teacher_incard", "intro_box",
+            "teachers_div",
+            "name", "teacherList"
+            "sidePictureListDiv",)
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[%s]//a[@href]" % in_cls,
+        pat_dict={ "link": "./@href", "name": ".//text()", })
+    data = data or index.a_select(
+            url, "linea", "taecherListItemName")
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='box fix']",
+        pat_dict={
+            "link": "./div[@class='pic']/a/@href",
+            "name": ".//div[@class='name']/text()", })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='picContentName']",
+        pat_dict={
+            "link": "./ancestor::a/@href",
+            "name": "./text()", })
+    data = data or index.xpath_select(
+        url_or_path=url, root_pat="//div[@class='title']",
+        pat_dict={
+            "link": "./ancestor::a/@href",
+            "name": "./h5/text()", })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//ul[@class='load_ul fix']/li[%s]/h3/a" \
+                % xpath.idx_range(1),
+        pat_dict={ "link": "./@href", "name": "./text()", })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//div[@class='sidePictureListDiv']/ul/li/a",
+        pat_dict={ "link": "./@href", "name": ".//text()", })
+    data = data or index.xpath_select(
+        url_or_path=url,
+        root_pat="//li[@class='teacherListEach']/a",
+        pat_dict={ "link": "./@href", "name": "./text()", })
+
+    return data
+
+@utils.index_cache
+def bjtu_edu_cn():
+    seed = "http://faculty.bjtu.edu.cn/civil.html?szm=%s"
+    ss = [seed % c for c in string.ascii_lowercase \
+            if c not in ['e', 'i', 'o', 'u', 'v']]
+    seeds = [("土木建筑工程学院", "土木建筑工程学院", s) \
+            for s in ss]
+    return index.run_faculties("bjtu", _bjtu_single,
+                               mix_seeds=seeds)
+
 def _bjut_single(faculty, tag, url):
     data = []
     div_classes = [
@@ -62,7 +128,7 @@ def _sicau_single(faculty, tag, url):
             ]
     data = data or index.xpath_select(
         url_or_path=url,
-        root_pat=root_pat.format(xpath.str_len),
+        root_pat=root_pat.format(xpath.str_len()),
         allow_multi= any([w in url for w in whitelist]),
         pat_dict={
             "link": "./ancestor-or-self::a/@href",

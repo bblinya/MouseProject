@@ -1,4 +1,4 @@
-电子信息工程学院：http://eie.bjtu.edu.cn/WebHtml/szdw/0406
+// 电子信息工程学院：http://eie.bjtu.edu.cn/WebHtml/szdw/0406
 
 计算机与信息技术学院：http://faculty.bjtu.edu.cn/cs.html
 
@@ -9,9 +9,12 @@
 副教授：http://faculty.bjtu.edu.cn/trans/jsfl.html?gid=2
 讲师：http://faculty.bjtu.edu.cn/trans/jsfl.html?gid=3
 
-土木建筑工程学院：http://faculty.bjtu.edu.cn/civil/jsml.html
+// 土木建筑工程学院：http://faculty.bjtu.edu.cn/civil/jsml.html
 
-机械与电子控制工程学院：http://faculty.bjtu.edu.cn/mece/jsml.html
+机械与电子控制工程学院：http://faculty.bjtu.edu.cn/mece/jsml.html?page=1
+机械与电子控制工程学院：http://faculty.bjtu.edu.cn/mece/jsml.html?page=2
+机械与电子控制工程学院：http://faculty.bjtu.edu.cn/mece/jsml.html?page=3
+机械与电子控制工程学院：http://faculty.bjtu.edu.cn/mece/jsml.html?page=4
 
 电气工程学院：http://ee.bjtu.edu.cn/szdw/jsml/index.htm
 
@@ -21,7 +24,10 @@
 统计与运筹学系：http://soms.bjtu.edu.cn/szdw/jsml/tjyycxx/index.htm
 数据科学系：http://soms.bjtu.edu.cn/szdw/jsml/sjkxx/index.htm
 
-物理科学与工程学院：https://faculty.bjtu.edu.cn/spse/jsml.html
+物理科学与工程学院：
+// https://faculty.bjtu.edu.cn/spse/jsml.html
+博导：https://faculty.bjtu.edu.cn/spse/jsfl.html?gid=199
+硕导：https://faculty.bjtu.edu.cn/spse/jsfl.html?gid=200
 
 马克思主义学院：
 教授：http://mkszyxy.bjtu.edu.cn/szdw/js/index.htm
@@ -30,7 +36,11 @@
 
 语言与传播学院：http://faculty.bjtu.edu.cn/yyxy/jsml.html
 
-软件学院：http://faculty.bjtu.edu.cn/rjxy/jsml.html
+软件学院：
+// http://faculty.bjtu.edu.cn/rjxy/jsml.html
+软件工程研究中心：http://faculty.bjtu.edu.cn/rjxy/jsfl.html?gid=124
+智慧交通软件与安全研究中心：http://faculty.bjtu.edu.cn/rjxy/jsfl.html?gid=133
+实验教学示范中心：http://faculty.bjtu.edu.cn/rjxy/jsfl.html?gid=151
 
 建筑与艺术学院：
 建筑系：http://saad.bjtu.edu.cn/szll/jzx/index.htm

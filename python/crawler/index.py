@@ -11,7 +11,7 @@ from os import path
 from lxml import html, etree
 import lxml.html.clean
 
-from . import web, utils
+from . import web, utils, xpath
 
 logger = logging.getLogger("index")
 
@@ -122,7 +122,7 @@ def run_faculties(
             data = func(*args)
             return validate_index_attrs(link, data)
 
-        l.info("process {} >{} >{}".format(
+        l.info("process {}> {}> {}".format(
             faculty, tag, link))
         _f = utils.index_cache(
             _func_wrapper, cache=False,
@@ -172,6 +172,14 @@ def validate_index_attrs(
 
     assert allow_empty or outs, "data output is empty"
     return outs
+
+def a_select(url, *classes):
+    pat = "//a[(%s) and %s>1 and %s>0]" % (
+            xpath.in_cls(*classes),
+            xpath.str_len("@href"), xpath.str_len())
+    return xpath_select(
+        url_or_path=url, root_pat=pat,
+        pat_dict={ "link": "./@href", "name": "./text()" })
 
 def title(url_or_path: str, **kw):
     attrs = {

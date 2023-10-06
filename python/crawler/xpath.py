@@ -1,6 +1,15 @@
 
 str_strip = "translate(text(), ' &#9;&#10;&#13', '')"
-str_len = "string-length({})".format(str_strip)
+
+def str_len(val = str_strip):
+    return "string-length({})".format(val)
+
+def idx_range(start=None, stop=None):
+    """ index start from 1 """
+    pat = []
+    start and pat.append("position() > %i" % start)
+    stop and pat.append("position() < %i" % stop)
+    return " and ".join(pat)
 
 def in_cls(*args):
     return " or ".join([

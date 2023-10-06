@@ -19,6 +19,8 @@ from . import utils, log
 web_logger = logging.getLogger("web")
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3.connectionpool").setLevel(logging.WARNING)
+#  logging.getLogger("charset_normalizer").setLevel(logging.WARNING)
+logging.getLogger("selenium.webdriver.remote.remote_connection").setLevel(logging.INFO)
 
 def get_static_url(url: str, error=True) -> str:
     headers = {
@@ -33,7 +35,10 @@ def get_static_url(url: str, error=True) -> str:
         #  print(resp.reason)
         #  print(resp.content)
         return ""
-    return resp.content.decode("utf-8")
+    encoding = "utf-8"
+    if resp.encoding != resp.apparent_encoding:
+        encoding = "GBK"
+    return resp.content.decode(encoding)
 
 def _get_driver():
     options = webdriver.ChromeOptions()
@@ -66,7 +71,7 @@ def get_dynamic_url(url: str) -> str:
     #  options.add_argument("--disable-blink-features=AutomationControlled")
     driver = _get_driver()
     driver.get(url)
-    time.sleep(10)
+    #  time.sleep(10)
     # driver.find_element(By.XPATH, "//div")
     return driver.page_source
 
