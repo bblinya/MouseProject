@@ -19,7 +19,8 @@ from . import utils, log
 web_logger = logging.getLogger("web")
 logging.getLogger("requests").setLevel(logging.WARNING)
 logging.getLogger("urllib3.connectionpool").setLevel(logging.WARNING)
-#  logging.getLogger("charset_normalizer").setLevel(logging.WARNING)
+logging.getLogger("charset_normalizer").setLevel(logging.WARNING)
+logging.getLogger("chardet.charsetprober").setLevel(logging.WARNING)
 logging.getLogger("selenium.webdriver.remote.remote_connection").setLevel(logging.INFO)
 
 def get_static_url(url: str, error=True) -> str:
